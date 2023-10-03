@@ -1,12 +1,16 @@
-.html, body{
+* {
     margin: 0px;
     padding: 0px;
     box-sizing: 0;
     overflow-y: hidden; 
     overflow-x: hidden; 
     font-family: 'Chakra Petch', sans-serif;
-    background-color: rgb(255, 255, 255);
-    
+    background-color: var(--color-two);
+}
+
+:root{
+    --color-one: #000000; 
+    --color-two: #ffffff; 
 }
 
 /*Centralizar*/
@@ -16,5 +20,42 @@
     position: relative;
     justify-content: center;
     margin: auto;
+}
+
+/*Header*/
+
+@keyframes barprogress{
+    to {
+        background-position-x: 30px; 
+    }
+}
+
+.barprogress {
+    border: 3px solid rgb(0, 0, 0);
+    width: auto;  
+    height: 30px;
+    background-color: var(--color-one);
+    background-image: linear-gradient(
+    -45deg,
+    #ffc61a 0%, 
+    #ffc61a 26%,
+    transparent 26%,
+    transparent 51%, 
+    #ffc61a 51%, 
+    #ffc61a 76%, 
+    transparent 76%,
+    transparent 100%
+    );
+
+    background-size: 30px;
+    animation: barprogress 0.6s linear infinite;  
+}
+
+.page-title{
+    font-size: 20px;
+    
+
 
 }
+
+
