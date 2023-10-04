@@ -2,7 +2,6 @@
     margin: 0px;
     padding: 0px;
     box-sizing: 0;
-    overflow-y: hidden; 
     overflow-x: hidden; 
     font-family: 'Chakra Petch', sans-serif;
     background-color: var(--color-two);
@@ -11,7 +10,25 @@
 :root{
     --color-one: #000000; 
     --color-two: #ffffff; 
+    -
 }
+
+/*Scroolbar*/
+::-webkit-scrollbar {
+    width: 3px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #c0c0c0; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7a7a7a; 
+  }
 
 /*Centralizar*/
 .center{
@@ -22,15 +39,14 @@
     margin: auto;
 }
 
-/*Header*/
-
-@keyframes barprogress{
+/*---------------------------Barras---------------------------*/
+@keyframes bar-top {
     to {
         background-position-x: 30px; 
     }
 }
 
-.barprogress {
+.bar-top, .bar-bottom {
     border: 3px solid rgb(0, 0, 0);
     width: auto;  
     height: 30px;
@@ -48,14 +64,40 @@
     );
 
     background-size: 30px;
-    animation: barprogress 0.6s linear infinite;  
+    animation: bar-top 0.6s linear infinite;  
+}
+
+.bar-bottom { 
+
+
+}
+
+
+/*---------------------------títulos---------------------------*/
+.title-project{
+    font-size: 20px;
+    margin-top: 15px;
+    padding: 10px;
 }
 
 .page-title{
-    font-size: 20px;
     
+    
+    
+}
 
+/*---------------------------img---------------------------*/
+.top-img{
 
 }
 
+.display-image{ 
+    width: 80px;
+    height: 80px;
+    padding: 5px;
+    pointer-events: none; 
+}
 
+.footer{
+    
+}
