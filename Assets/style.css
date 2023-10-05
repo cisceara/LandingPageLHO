@@ -10,7 +10,7 @@
 :root{
     --color-one: #000000; 
     --color-two: #ffffff; 
-    -
+    
 }
 
 /*Scroolbar*/
@@ -23,7 +23,7 @@
   }
    
   ::-webkit-scrollbar-thumb {
-    background: #c0c0c0; 
+    background: #ffc61a48; 
   }
   
   ::-webkit-scrollbar-thumb:hover {
@@ -34,7 +34,6 @@
 .center{
     flex-wrap: wrap;
     display: flex;
-    position: relative;
     justify-content: center;
     margin: auto;
 }
@@ -69,21 +68,64 @@
 
 .bar-bottom { 
 
-
 }
 
 
-/*---------------------------títulos---------------------------*/
+/*---------------------------Textos---------------------------*/
+
+.box-title{
+    width: 80%;
+    height: 80%;
+    padding: 20px;
+}
+
 .title-project{
-    font-size: 20px;
-    margin-top: 15px;
-    padding: 10px;
+    font-size: 15px;
+    padding: 20px;
+    border: 0px solid black;
+    box-shadow: 0px 1px 0px 0px black;
+
 }
 
-.page-title{
+.box-text{
     
-    
-    
+}
+
+.title-dev{
+    font-size: 15px;
+
+}
+
+.sub-title-dev{
+    font-size: 15px;
+
+}
+
+.about-text{
+    font-size: 15px;
+    border: 1px solid black;
+    width: 85%;
+    padding: 5px;
+
+}
+
+.box-description{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    width: 85%;
+    padding: 5px;
+
+
+}
+
+.about-text, .box-description{
+    bottom: 30px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.753);
+}
+
+.description{
+    font-weight: 600;
 }
 
 /*---------------------------img---------------------------*/
@@ -91,13 +133,34 @@
 
 }
 
-.display-image{ 
-    width: 80px;
-    height: 80px;
-    padding: 5px;
+.display-img{ 
+    width: 120px;
+    height: 120px;
+    padding: auto; 
+    margin-top: 10px;
     pointer-events: none; 
 }
 
-.footer{
-    
+.img-under-construction{
+    position: relative;
+    margin-top: 30px; 
 }
+
+
+/*---------------------------Footer---------------------------*/
+
+.footer{
+}
+
+.footer-logo{
+    width: 50px;
+    height: 50px;
+} 
+
+.footer-text{
+    margin-bottom: 20px;
+    font-size: 15px;
+
+}
+
+
