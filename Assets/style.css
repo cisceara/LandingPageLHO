@@ -30,28 +30,29 @@
   }
 
 .center{
-    display: grid;
+    display: flex; 
     justify-content: center;
     margin: auto;
 }
 
 .page{
-     
+    position: relative; 
+    
 }
 
 
 
 /*---------------------------Barras---------------------------*/
-@keyframes bar-top {
+@keyframes bar {
     to {
         background-position-x: 30px; 
     }
 }
 
-.bar-top, .bar-bottom {
-    position: static; 
-    border: 3px solid rgb(0, 0, 0);
-    width: auto;  
+.bar {
+    display: block;
+    border: 10px solid rgb(0, 0, 0);
+    width: auto;
     height: 30px;
     background-color: var(--color-one);
     background-image: linear-gradient(
@@ -67,51 +68,61 @@
     );
 
     background-size: 30px;
-    animation: bar-top 0.6s linear infinite;  
+    animation: bar 1s linear infinite;  
 }
 
-.bar-top{
-
+/*------------------------------------------------------*/
+.background{
+    display: flex; 
+    justify-content: center; 
+    position: fixed; 
+    width: 100%;
+    height: 100%;
+    -o-object-fit:cover;
+    object-fit:cover; 
+    z-index: 0;
 
 }
 
 /*------------------------------------------------------*/
 
+
 .box-title{
-
-    width: 80%;
-    height: 80%;
-    margin-top: 20px;
-    padding: 10px;
-
+    margin-bottom: 20px;
 }
 
 .title-project{
+    max-width: 900px;
+    width: 60%;  
+    text-align: center;
     font-size: 15px;
-    padding: 20px;
-    border: 0px solid black;
-    box-shadow: 0px 1px 0px 0px black;
-
+    padding: 40px;
+    border-bottom: 1px solid black;
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.137);
 }
 
 .display-img{ 
-    margin-top: 10px;
-    margin-bottom: -5px;
+    margin-bottom: 10px;
     pointer-events: none; 
 }
 
 .top-img{
-    width: 125px;
-    height: 125px;
+    width: 100px;
+    height: 100px;
 }
 
 /*------------------------------------------------------*/
 
 .box-text{
-    width: 75%;
-    padding: 10px;
+    margin: auto; 
+    text-align: center;
+    max-width: 950px; 
+    width: 70%;
+    padding: 25px;
     background-color:#f2f2f2;
-    place-items: center;
+    box-shadow: 0px 0px 15px  rgba(0, 0, 0, 0.219);
+
+
 }
 
 .title-dev{
@@ -126,54 +137,50 @@
 /*------------------------------------------------------*/
 
 .img-under-construction{
-    position: relative;
-    margin-top: 30px; 
+    max-width: 800px; 
+    margin: auto;
+
 }
 
 /*------------------------------------------------------*/
 
 .about-text{
     font-size: 15px;
-    border: 1px solid black;
-    width: 85%;
-    padding: 5px;
-    box-shadow: 4px 0px 0px 0px rgba(0, 0, 0, 0.753);
-
-}
-
-.box-description{
-    border: 1px solid black;
-    width: 85%;
-    margin-top: 10px;
-    padding: 5px;
-    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.753);
-
+    max-width: 950px; 
+    padding: 10px;
+    width: 70%;
+    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.219);
+    border: 1px solid #00aeff7c;
+    background-color: #00aeff25;
 
 }
 
 .description{
-    font-weight: 600;
+    text-align: center;
+    max-width: 950px; 
+    width: 70%;
+    margin-top: -1px;
+    margin-bottom: 10px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px  C;
+    border: 1px solid #00aeff7c;
+    background-color: #00aeff25;
 }
-
 
 /*------------------------------------------------------*/
 
+.box-end{
+    padding: 10px;
+}
 
 .end-logo{
-    margin-top: 20px;
     width: 50px;
-    height: 50px;
     border-radius: 100%;
 } 
 
 .end-text{
-    margin-bottom: 20px;
+    text-align: center;
     font-size: 15px;
 
 }
 
-
-/*------------------------------------------------------*/
-.bar-bottom { 
-    
-}
