@@ -88,21 +88,21 @@
 
 
 .box-title{
-    margin-bottom: 20px;
+    margin-bottom: 20px; 
 }
 
 .title-project{
     max-width: 900px;
     width: 60%;  
     text-align: center;
-    font-size: 15px;
+    font-size: 20px;
     padding: 40px;
     border-bottom: 1px solid black;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.137);
 }
 
 .display-img{ 
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     pointer-events: none; 
 }
 
@@ -113,20 +113,21 @@
 
 /*------------------------------------------------------*/
 
-.box-text{
+.box-dev{
     margin: auto; 
     text-align: center;
     max-width: 950px; 
-    width: 70%;
-    padding: 25px;
+    width: 65%;
+    padding: 30px;
     background-color:#f2f2f2;
-    box-shadow: 0px 0px 15px  rgba(0, 0, 0, 0.219);
-
+    box-shadow: 0px 0px 25px  rgba(0, 0, 0, 0.219);
+    backdrop-filter: blur(5px) saturate(100%);
+    border-radius: 100px;
 
 }
 
 .title-dev{
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .sub-title-dev{
@@ -137,7 +138,7 @@
 /*------------------------------------------------------*/
 
 .img-under-construction{
-    max-width: 800px; 
+    max-width: 700px; 
     margin: auto;
 
 }
@@ -145,26 +146,34 @@
 /*------------------------------------------------------*/
 
 .about-text{
-    font-size: 15px;
+    color: #1165ae; 
+    font-size: 20px; 
     max-width: 950px; 
-    padding: 10px;
+    padding: 15px;
+    margin-bottom: 1px;
     width: 70%;
-    box-shadow: 0px 0px 10px  rgba(0, 0, 0, 0.219);
-    border: 1px solid #00aeff7c;
-    background-color: #00aeff25;
-
+    box-shadow: 0px 0px 5px  rgba(0, 0, 0, 0.219);
+    border: 1px solid #ffffffce;
+    border-bottom: none;
+    background-color: #2ea9e252; 
+    backdrop-filter: blur(5px) saturate(100%);
+    border-top-right-radius: 40px;
+    
 }
 
 .description{
+    height: 1000px;
     text-align: center;
     max-width: 950px; 
     width: 70%;
-    margin-top: -1px;
-    margin-bottom: 10px;
-    padding: 10px;
-    box-shadow: 0px 0px 10px  C;
-    border: 1px solid #00aeff7c;
-    background-color: #00aeff25;
+    padding: 15px;
+    box-shadow: 0px 0px 5px  rgba(0, 0, 0, 0.219); 
+    border: 1px solid #ffffffce;
+    border-top: none;
+    background-color: #2ea9e252; 
+    backdrop-filter: blur(5px) saturate(100%);
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
 
 /*------------------------------------------------------*/
