@@ -7,17 +7,17 @@ let thumbnails = document.querySelectorAll('.thumbnail .item');
 let countItem = items.length;
 let itemActive = 0;
 // event next click
-next.onclick = function(){
+next.onclick = function () {
     itemActive = itemActive + 1;
-    if(itemActive >= countItem){
+    if (itemActive >= countItem) {
         itemActive = 0;
     }
     showSlider();
 }
 //event prev click
-prev.onclick = function(){
+prev.onclick = function () {
     itemActive = itemActive - 1;
-    if(itemActive < 0){
+    if (itemActive < 0) {
         itemActive = countItem - 1;
     }
     showSlider();
@@ -26,7 +26,7 @@ prev.onclick = function(){
 let refreshInterval = setInterval(() => {
     next.click();
 }, 5000)
-function showSlider(){
+function showSlider() {
     // remove item active old
     let itemActiveOld = document.querySelector('.slider .list .item.active');
     let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
