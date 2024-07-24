@@ -259,5 +259,34 @@ a {
 section.sites{
     background: linear-gradient(90deg,#287EEE,#0A0B13 );
     width: 100%;
-    height: 80px;
+    height: 90px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0px 100px; 
+    gap: 15px;  
 }
+
+.fiec{
+    width: 140px;
+}
+
+.sesi{
+    width: 137px;
+}
+
+.senai{
+    width: 175px;
+}
+
+
+/* Título - Apresentação _______________________________________________________ */
+
+section.title-about-us{
+    width: 100%;
+    height: vh;
+    color: #ffffff;
+    background: linear-gradient(90deg, #0A0B13,#287EEE);
+}
+
+
