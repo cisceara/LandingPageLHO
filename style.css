@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Raleway", sans-serif;
+    overflow-x: hidden; 
 }
 
 /* header _______________________________________________________ */
@@ -36,6 +37,7 @@ header {
 .links a {
     color: #ffffff;
     font-weight: 600;
+    font-size: 0.9rem; 
     box-shadow: inset 0 0 0 0 #ffffff;
     margin: 0 -.25rem;
     padding: 0 .25rem;
@@ -47,8 +49,7 @@ header {
     color: #ffffff;
 }
 
-.btn1,
-.btn2 {
+.btn1,.btn2 {
     padding: 8px 16px;
     border-radius: 5px;
     font-weight: 600;
@@ -121,7 +122,7 @@ a {
     position: absolute;
     left: 0;
     bottom: 0;
-    background-image: linear-gradient(to top, #131523 30%, transparent);
+    background-image: linear-gradient(to top, #0A0B13 5%, transparent);
 }
 
 .slider .list .item .content {
@@ -253,18 +254,17 @@ a {
     }
 }
 
-
 /* Logos site _______________________________________________________ */
 
 section.sites{
-    background: linear-gradient(90deg,#287EEE,#0A0B13 );
+    background: linear-gradient(to left, #0A0B13,#287EEE);
     width: 100%;
     height: 90px;
     display: flex;
     justify-content: left;
     align-items: center;
     padding: 0px 100px; 
-    gap: 15px;  
+    gap: 15px; 
 }
 
 .fiec{
@@ -279,14 +279,44 @@ section.sites{
     width: 175px;
 }
 
+/* Título - Sobre nós _______________________________________________________ */
 
-/* Título - Apresentação _______________________________________________________ */
-
-section.title-about-us{
+.title-about-us{
     width: 100%;
-    height: vh;
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #ffffff;
-    background: linear-gradient(90deg, #0A0B13,#287EEE);
+    background: linear-gradient(to right, #0A0B13,#287EEE);
+
 }
 
+.box-text{
+    text-align: center;
+    max-width: 600px; 
+}
 
+h1,p{
+    margin: 0px 20px;
+    padding: 5px; 
+}
+
+h1{
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+p,.subtitle{
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+/*  Frame vídeo - sobre nós _______________________________________________________ */
+
+.bg-frame{
+    background: linear-gradient(to top, #287EEE,#0A0B13);
+    width: 100%;
+    height: 600px; 
+
+}
