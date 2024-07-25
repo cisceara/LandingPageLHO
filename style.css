@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Raleway", sans-serif;
-    overflow-x: hidden; 
+    overflow-x: hidden;
 }
 
 /* header _______________________________________________________ */
@@ -37,7 +37,7 @@ header {
 .links a {
     color: #ffffff;
     font-weight: 600;
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
     box-shadow: inset 0 0 0 0 #ffffff;
     margin: 0 -.25rem;
     padding: 0 .25rem;
@@ -49,7 +49,8 @@ header {
     color: #ffffff;
 }
 
-.btn1,.btn2 {
+.btn1,
+.btn2 {
     padding: 8px 16px;
     border-radius: 5px;
     font-weight: 600;
@@ -256,67 +257,84 @@ a {
 
 /* Logos site _______________________________________________________ */
 
-section.sites{
-    background: linear-gradient(to left, #0A0B13,#287EEE);
+section.sites {
+    background: linear-gradient(to left, #0A0B13, #287EEE);
     width: 100%;
     height: 90px;
     display: flex;
     justify-content: left;
     align-items: center;
-    padding: 0px 100px; 
-    gap: 15px; 
+    padding: 0px 100px;
+    gap: 15px;
 }
 
-.fiec{
+.fiec {
     width: 140px;
 }
 
-.sesi{
+.sesi {
     width: 137px;
 }
 
-.senai{
+.senai {
     width: 175px;
 }
 
 /* Título - Sobre nós _______________________________________________________ */
 
-.title-about-us{
+.title-about-us {
     width: 100%;
     height: 20vh;
     display: flex;
     justify-content: center;
     align-items: center;
     color: #ffffff;
-    background: linear-gradient(to right, #0A0B13,#287EEE);
+    background: linear-gradient(to right, #0A0B13, #287EEE);
 
 }
 
-.box-text{
+.box-text {
     text-align: center;
-    max-width: 600px; 
+    max-width: 600px;
 }
 
-h1,p{
+h1,
+p {
     margin: 0px 20px;
-    padding: 5px; 
+    padding: 5px;
 }
 
-h1{
+h1 {
     font-weight: 900;
     font-size: 3rem;
 }
 
-p,.subtitle{
+p,
+.subtitle {
     font-weight: 500;
     font-size: 1rem;
 }
 
 /*  Frame vídeo - sobre nós _______________________________________________________ */
 
-.bg-frame{
-    background: linear-gradient(to top, #287EEE,#0A0B13);
+.bg-about-us {
+    background: linear-gradient(to top, #287EEE, #0A0B13);
     width: 100%;
-    height: 600px; 
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.frame-video{
+    width: 800px;
+    height: 450px;
+    border-radius: 30px;
+    overflow: hidden;
+    border: solid 5px transparent;
+    background:
+    linear-gradient(to left, #ffffff, #0A0B13) padding-box,
+    linear-gradient(to left, #ffffff 20%, #0A0B13 100%) border-box;
 
 }
+
