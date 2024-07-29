@@ -259,7 +259,7 @@ a {
 section.sites {
     background: linear-gradient(to left, #0A0B13, #287EEE);
     width: 100%;
-    height: 80px; 
+    height: 80px;
     display: flex;
     justify-content: left;
     align-items: center;
@@ -268,7 +268,7 @@ section.sites {
 
 .fiec {
     width: 140px;
-    margin-left: 50px; 
+    margin-left: 50px;
 }
 
 .sesi {
@@ -326,28 +326,28 @@ p,
     align-items: center;
 }
 
-.frame-video{
+.frame-video {
     width: 800px;
     height: 450px;
     border-radius: 30px;
     overflow: hidden;
     border: solid 5px transparent;
     background:
-    linear-gradient(to top, #ffffff, #0A0B13) padding-box,
-    linear-gradient(to top, #ffffff , #0A0B13 80%) border-box;
+        linear-gradient(to top, #ffffff, #0A0B13) padding-box,
+        linear-gradient(to top, #ffffff, #0A0B13 80%) border-box;
     box-shadow: #0000001a 0px 20px 25px -5px, #0000000a 0px 10px 10px -5px;
 
 
 }
 
 /* Título - Serviços _______________________________________________________ */
-section.services{
+section.services {
     background-color: #0A0B13;
     height: 600px;
-    
+
 }
 
-.center-title{
+.center-title {
     display: flex;
     justify-content: center;
 
@@ -365,8 +365,16 @@ section.services{
     border-radius: 0px 0px 50px 50px;
 }
 
-.service1{
+.service1 {
+  
+
+}
+
+/* Serviços _______________________________________________________ */
+
+.grid{
     border: solid 5px #ffffff;
     max-width: 400px;
-    
+    background-color: red;
 }
+
