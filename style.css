@@ -11,7 +11,6 @@ header {
     position: relative;
     padding: 0 2rem;
     background-color: #0A0B13;
-
 }
 
 .navbar {
@@ -298,21 +297,17 @@ section.sites {
     max-width: 600px;
 }
 
-h1,
-p {
-    margin: 0px 20px;
-    padding: 5px;
-}
-
 h1 {
     font-weight: 900;
     font-size: 3rem;
 }
 
-p,
+
 .subtitle {
     font-weight: 500;
     font-size: 1rem;
+    margin: 0px 20px;
+    padding: 5px;
 }
 
 /*  Frame vídeo - sobre nós _______________________________________________________ */
@@ -343,8 +338,6 @@ p,
 /* Título - Serviços _______________________________________________________ */
 section.services {
     background-color: #0A0B13;
-    height: 600px;
-
 }
 
 .center-title {
@@ -360,6 +353,7 @@ section.services {
     width: 80%;
     height: 200px;
     margin-top: 10px;
+    margin-bottom: 60px;
     color: #ffffff;
     background: linear-gradient(to bottom, #0A0B13, #287EEE);
     border-radius: 0px 0px 50px 50px;
@@ -368,35 +362,75 @@ section.services {
 /* Serviços _______________________________________________________ */
 
 .grid {
-    width: 100%;
-    height: 500px;
+    display: grid;
+    width: 800px;
     margin: auto;
-    background-color: #287EEE;
-    border: solid 2px #ffffff;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 80px;
+    margin-bottom: 60px;
 }
 
-.service1{
-    width: auto;
-    display: grid; 
-    justify-content: center;
-    border: solid 2px #000;
-
-}
-
-.box-title1 {
-    display: flex;
-    justify-content: left;
-    max-width: 400px; 
-    border: solid 5px #ffffff;
-    color:#ffffff; 
-}
-
-.box-content1{
+.s-box-title {
     max-width: 400px;
-    border: solid 5px #ffffff;
-    color:#ffffff; 
-
-    
-    
+    border: 3px solid transparent;
+    box-shadow: inset 0 100vw #0A0B13;
+    background-image: linear-gradient(to right, #287EEE, #0A0B13);
+    background-origin: border-box;
+    border-radius: 10px;
 }
 
+h2 {
+    color: #ffffff;
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    max-width: 400px;
+    border: 3px solid transparent;
+    box-shadow: inset 0 100vw #0A0B13;
+    background-image: linear-gradient(to top, #287EEE, #0A0B13);
+    background-origin: border-box;
+    border-radius: 10px;
+
+}
+
+.s-text {
+    color: #ffffff;
+    margin: 0px 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 14px;
+
+}
+
+.s-img1,
+.s-img2,
+.s-img3,
+.s-img4 {
+    width: 150px;
+    border-radius: 20px;
+}
+
+.btn-service1 {
+    background-color: #287EEE;
+    color: #ffffff;
+    width: 300px;
+    padding: 8px 16px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-weight: 600;
+    border: 2px solid #287EEE;
+}
+
+.btn-service1:hover {
+    background-color: #1162cc;
+    border: 2px solid #1162cc;
+    color: #ffffff;
+    cursor: pointer;
+}
