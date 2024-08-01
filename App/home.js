@@ -1,4 +1,4 @@
-let items = document.querySelectorAll('.slider .list .item');
+let items = document.querySelectorAll('.home .list .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let thumbnails = document.querySelectorAll('.thumbnail .item');
@@ -12,7 +12,7 @@ next.onclick = function () {
     if (itemActive >= countItem) {
         itemActive = 0;
     }
-    showSlider();
+    showhome();
 }
 //event prev click
 prev.onclick = function () {
@@ -20,15 +20,15 @@ prev.onclick = function () {
     if (itemActive < 0) {
         itemActive = countItem - 1;
     }
-    showSlider();
+    showhome();
 }
 // auto run slider
 let refreshInterval = setInterval(() => {
     next.click();
 }, 5000)
-function showSlider() {
+function showhome() {
     // remove item active old
-    let itemActiveOld = document.querySelector('.slider .list .item.active');
+    let itemActiveOld = document.querySelector('.home .list .item.active');
     let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
     itemActiveOld.classList.remove('active');
     thumbnailActiveOld.classList.remove('active');
@@ -48,6 +48,6 @@ function showSlider() {
 thumbnails.forEach((thumbnail, index) => {
     thumbnail.addEventListener('click', () => {
         itemActive = index;
-        showSlider();
+        showhome();
     })
 })

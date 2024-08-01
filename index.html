@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laboratório de Higiene Ocupacional</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./styles/style.css"/>
+    <link rel="stylesheet" href="./styles/home.css"/>
+    <!-- <link rel="stylesheet" href="./styles/analysis.css"/> -->
+
 </head>
 
 <body>
@@ -31,104 +34,106 @@
     </header>
 
     <!--Banners-->
-    <div class="slider">
-        <!--Items-->
-        <div class="list">
-            <div class="item active">
-                <img src="./Assets/img1.png">
-                <div class="content">
-                    <p>Lore ipsum</p>
-                    <h2>Título1</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
-                    </p>
+    <section class="banner">
+        <div class="home">
+            <!--Items-->
+            <div class="list">
+                <div class="item active">
+                    <img src="./Assets/img1.png">
+                    <div class="content">
+                        <p>Lore ipsum</p>
+                        <h2>Título1</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./Assets/img2.png">
+                    <div class="content">
+                        <p>Lore ipsum</p>
+                        <h2>Título2</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./Assets/img3.png">
+                    <div class="content">
+                        <p>Lore ipsum</p>
+                        <h2>Título3</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./Assets/img4.png">
+                    <div class="content">
+                        <p>Lore ipsum</p>
+                        <h2>Título4</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        </p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./Assets/img5.png">
+                    <div class="content">
+                        <p>Lore ipsum</p>
+                        <h2>Título5</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="item">
-                <img src="./Assets/img2.png">
-                <div class="content">
-                    <p>Lore ipsum</p>
-                    <h2>Título2</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
-                    </p>
-                </div>
+            <!-- Botões -->
+            <div class="arrows">
+                <button id="prev"></button>
+                <button id="next"></button>
             </div>
-            <div class="item">
-                <img src="./Assets/img3.png">
-                <div class="content">
-                    <p>Lore ipsum</p>
-                    <h2>Título3</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
-                    </p>
+            <!-- Thumbnails -->
+            <div class="thumbnail">
+                <div class="item active">
+                    <img src="./Assets/img1.png">
+                    <div class="content">
+                        Título1
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <img src="./Assets/img4.png">
-                <div class="content">
-                    <p>Lore ipsum</p>
-                    <h2>Título4</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
-                    </p>
+                <div class="item">
+                    <img src="./Assets/img2.png">
+                    <div class="content">
+                        Título2
+                    </div>
                 </div>
-            </div>
-            <div class="item">
-                <img src="./Assets/img5.png">
-                <div class="content">
-                    <p>Lore ipsum</p>
-                    <h2>Título5</h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
-                    </p>
+                <div class="item">
+                    <img src="./Assets/img3.png">
+                    <div class="content">
+                        Título3
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./Assets/img4.png">
+                    <div class="content">
+                        Título4
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./Assets/img5.png">
+                    <div class="content">
+                        Título5
+                    </div>
                 </div>
             </div>
         </div>
-        <!-- Botões -->
-        <div class="arrows">
-            <button id="prev"></button>
-            <button id="next"></button>
-        </div>
-        <!---->
-        <div class="thumbnail">
-            <div class="item active">
-                <img src="./Assets/img1.png">
-                <div class="content">
-                    Título1
-                </div>
-            </div>
-            <div class="item">
-                <img src="./Assets/img2.png">
-                <div class="content">
-                    Título2
-                </div>
-            </div>
-            <div class="item">
-                <img src="./Assets/img3.png">
-                <div class="content">
-                    Título3
-                </div>
-            </div>
-            <div class="item">
-                <img src="./Assets/img4.png">
-                <div class="content">
-                    Título4
-                </div>
-            </div>
-            <div class="item">
-                <img src="./Assets/img5.png">
-                <div class="content">
-                    Título5
-                </div>
-            </div>
-        </div>
-    </div>
+    </section>
 
     <!--Sites-->
     <section class="sites">
@@ -186,6 +191,7 @@
         </div>
         <!-- Serviços -->
         <div class="grid">
+            <!-- Análise química -->
             <div class="service1">
                 <div class="s-box-title">
                     <h2>Lore ipsum1</h2>
@@ -197,6 +203,7 @@
                     <button class="btn-service1"><a>Lore ipsum</a></button>
                 </div>
             </div>
+            <!-- Análise qualidade do ar -->
             <div class="service2">
                 <div class="s-box-title">
                     <h2>Lore ipsum2</h2>
@@ -208,6 +215,7 @@
                     <button class="btn-service1"><a>Lore ipsum</a></button>
                 </div>
             </div>
+            <!-- Locação -->
             <div class="service3">
                 <div class="s-box-title">
                     <h2>Lore ipsum3</h2>
@@ -219,6 +227,7 @@
                     <button class="btn-service1"><a>Lore ipsum</a></button>
                 </div>
             </div>
+            <!-- Treinamentos -->
             <div class="service4">
                 <div class="s-box-title">
                     <h2>Lore ipsum4</h2>
@@ -231,11 +240,12 @@
                 </div>
             </div>
         </div>
-    
+    </section>
+
     <!-- Análises -->
     <section class="analysis">
         <!-- Título -->
-        <div class="title-about-us">
+        <div class="title-analysis">
             <div class="title">
                 <h1>Lore ipsum</h1>
                 <p class="subtitle">
@@ -244,11 +254,53 @@
                 </p>
             </div>
         </div>
-        
+        <!-- Slide análises -->
+        <div class="slider">
+            <div class="item">
+                <h1>Lore ipsum1</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum hic iure enim, rem accusamus odit nemo aspernatur consequuntur vero in veniam fugiat, consectetur officiis voluptatum quidem libero. 
+                <img src="#" class="icon1">
+                <button><a>Lore ipsum</a></button>
+            </div>
+            <div class="item">
+                <h1>Lore ipsum2</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum hic iure enim, rem accusamus odit nemo aspernatur consequuntur vero in veniam fugiat, consectetur officiis voluptatum quidem libero. 
+            </div>
+            <div class="item">
+                <h1>Lore ipsum3</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum hic iure enim, rem accusamus odit nemo aspernatur consequuntur vero in veniam fugiat, consectetur officiis voluptatum quidem libero. 
+            </div>
+            <div class="item ">
+                <h1>Lore ipsum4</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum hic iure enim, rem accusamus odit nemo aspernatur consequuntur vero in veniam fugiat, consectetur officiis voluptatum quidem libero. 
+            </div>
+            <div class="item ">
+                <h1>Lore ipsum5</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum hic iure enim, rem accusamus odit nemo aspernatur consequuntur vero in veniam fugiat, consectetur officiis voluptatum quidem libero. 
+            </div>
+            <div class="item ">
+                <h1>Lore ipsum6</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum hic iure enim, rem accusamus odit nemo aspernatur consequuntur vero in veniam fugiat, consectetur officiis voluptatum quidem libero. 
+            </div>
+            <div class="item ">
+                <h1>Lore ipsum7</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum hic iure enim, rem accusamus odit nemo aspernatur consequuntur vero in veniam fugiat, consectetur officiis voluptatum quidem libero. 
+            </div>
+            <div class="item ">
+                <h1>Lore ipsum8</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum hic iure enim, rem accusamus odit nemo aspernatur consequuntur vero in veniam fugiat, consectetur officiis voluptatum quidem libero. 
+            </div>
+            <div class="item ">
+                <h1>Lore ipsum9</h1>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum hic iure enim, rem accusamus odit nemo aspernatur consequuntur vero in veniam fugiat, consectetur officiis voluptatum quidem libero. 
+            </div>
+            <button id="next">></button>
+            <button id="prev"><</button>
+        </div>
     </section>
 
-    </section>
-    <script src="app.js"></script>
+    <script src="./App/home.js"></script>
+    <!-- <script src="./App/analysis.js"></script> -->
 </body>
 
 </html>
