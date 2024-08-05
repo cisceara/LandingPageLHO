@@ -1,12 +1,14 @@
-let items = document.querySelectorAll('.home .list .item');
+//BANNERS ------------------------------------------------
+let items = document.querySelectorAll('.box-banners .list .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let thumbnails = document.querySelectorAll('.thumbnail .item');
 
-// config param
+//parâmetros
 let countItem = items.length;
 let itemActive = 0;
-// event next click
+
+// Próximo
 next.onclick = function () {
     itemActive = itemActive + 1;
     if (itemActive >= countItem) {
@@ -14,7 +16,7 @@ next.onclick = function () {
     }
     showhome();
 }
-//event prev click
+// Voltar
 prev.onclick = function () {
     itemActive = itemActive - 1;
     if (itemActive < 0) {
@@ -22,72 +24,72 @@ prev.onclick = function () {
     }
     showhome();
 }
-// auto run slider
+// Automático
 let refreshInterval = setInterval(() => {
     next.click();
 }, 5000)
 function showhome() {
-    // remove item active old
-    let itemActiveOld = document.querySelector('.home .list .item.active');
+
+    // remover item antigo
+    let itemActiveOld = document.querySelector('.box-banners .list .item.active');
     let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
     itemActiveOld.classList.remove('active');
     thumbnailActiveOld.classList.remove('active');
 
-    // active new item
+    // Ativar novo item
     items[itemActive].classList.add('active');
     thumbnails[itemActive].classList.add('active');
 
-    // clear auto time run slider
+    // Limpar intervalo automátio
     clearInterval(refreshInterval);
     refreshInterval = setInterval(() => {
         next.click();
     }, 5000)
 }
 
-// click thumbnail
+// Clique minicard
 thumbnails.forEach((thumbnail, index) => {
     thumbnail.addEventListener('click', () => {
         itemActive = index;
         showhome();
     })
-})
+});
 
-//Análises
-
-/*let items = document.querySelectorAll('.slider .item');
-let active = 3;
+//ANÁLISES ------------------------------------------------
+let card = document.querySelectorAll('.box-card .card');
+let action = 0;
 function loadShow(){
-    items[active].style.transform = `none`;
-    items[active].style.zIndex = 1;
-    items[active].style.filter = 'none';
-    items[active].style.opacity = 1;
-    // show after
+    card[action].style.transform = `none`;
+    card[action].style.zIndex = 1;
+    card[action].style.filter = 'none';
+    card[action].style.opacity = 1;
+
     let stt = 0;
-    for(var i = active + 1; i < items.length; i ++){
+    for(var i = action + 1; i < card.length; i ++){
         stt++;
-        items[i].style.transform = `translateX(${120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(-1deg)`;
-        items[i].style.zIndex = -stt;
-        items[i].style.filter = 'blur(5px)';
-        items[i].style.opacity = stt > 2 ? 0 : 0.6;
+        card[i].style.transform = `translateX(${300*stt}px) scale(${1 - 0.2*stt}) perspective(50px) rotateY(1deg)`;
+        card[i].style.zIndex = 0;
+        card[i].style.filter = 'blur(10px)';
+        card[i].style.opacity = stt > 1 ? 0 : 1;
     }
-     stt = 0;
-    for(var i = (active - 1); i >= 0; i --){
+    stt = 0;
+    for(var i = (action - 1); i >= 0; i --){
         stt++;
-        items[i].style.transform = `translateX(${-120*stt}px) scale(${1 - 0.2*stt}) perspective(16px) rotateY(1deg)`;
-        items[i].style.zIndex = -stt;
-        items[i].style.filter = 'blur(5px)';
-        items[i].style.opacity = stt > 2 ? 0 : 0.6;
+        card[i].style.transform = `translateX(${-300*stt}px) scale(${1 - 0.2*stt}) perspective(50px) rotateY(-1deg)`;
+        card[i].style.zIndex = 0;
+        card[i].style.filter = 'blur(0px)';
+        card[i].style.opacity = stt > 2 ? 0 : 1;
     }
 }
 loadShow();
-let next = document.getElementById('next');
-let prev = document.getElementById('prev');
-next.onclick = function(){
-   active = active + 1 < items.length ?  active + 1 : active;
-   loadShow();
-}
-prev.onclick = function(){
-    active = active - 1 >= 0 ? active -1 : active;
+
+let right = document.getElementById('right');
+let left = document.getElementById('left');
+right.onclick = function (){
+    action = action + 1 < card.length ? action + 1 : action;
     loadShow();
 }
-    */
+left.onclick = function (){
+    action = action - 1 >= 0 ? action - 1 : action;
+    loadShow();
+}
