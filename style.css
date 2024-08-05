@@ -428,7 +428,6 @@ h2 {
 .btn-service1:hover {
   background-color: #1162cc;
   border: 2px solid #1162cc;
-  color: #ffffff;
   cursor: pointer;
 }
 
@@ -525,6 +524,7 @@ h2 {
   font-weight: bold;
   opacity: 0.5;
   transition: opacity 0.5s;
+  z-index: 1;
 }
 
 #left:hover,
@@ -562,44 +562,124 @@ h2 {
   cursor: pointer;
 }
 
-/* CTA _______________________________________________________ */
-.call-to-action{
+/* Cta _______________________________________________________ */
+.call-to-action {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 500px;
+  height: 200px;
   background-color: #0A0B13;
 }
 
-.box-cta{
+.box-cta {
   display: flex;
   align-items: center;
   justify-content: space-around;
   width: 800px;
   height: 100px;
   border-radius: 100px;
-  background: linear-gradient(to left, #0A0B13, #287EEE);
-  column-gap: 150px;
+  column-gap: 50px;
+  overflow: hidden;
+  border: solid 5px transparent;
+  background:
+    linear-gradient(to right, #287EEE, #0A0B13) padding-box,
+    linear-gradient(to right, #0A0B13, #287EEE) border-box;
+  box-shadow: #0000001a 0px 20px 25px -5px, #0000000a 0px 10px 10px -5px;
+}
+
+.text-cta {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.btn-cta {
+  border-radius: 100px;
+  background-color: #287EEE;
+  color: #ffffff;
+  width: 200px;
+  padding: 8px 16px;
+  border-radius: 100px;
+  font-weight: 600;
+  border: 2px solid #287EEE;
+}
+
+.btn-cta:hover {
+  background-color: #1162cc;
+  border: 2px solid #1162cc;
+  cursor: pointer;
+}
+
+/* Nossos parceiros _______________________________________________________ */
+.enterprise {
+  background: #0A0B13;
+  height: 500px;
 
 }
 
-@keyframes glow {
-  0% { box-shadow: 0 0 30px #287EEE; }
-  50% { box-shadow: 0 0 40px #0A0B13; }
-  100% { box-shadow: 0 0 30px #287EEE; }
+.title-enterprise {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  background: #0A0B13;
 }
 
-.glow {
-  background-color: #9b59b6;
-  color: white;
+/* Slides parceiros _______________________________________________________ */
+
+/* .slide-partners{
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.wrapper {
+  width: 100vw;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 18px;
-  animation: glow 1.5s ease-in-out infinite; /* Animação de brilho */
 }
-
-.cta{
-  border-radius: 100px; 
+.slider {
+  width: 1000px;
+  height: 100px;
+  position: relative;
+  background: white;
+  box-shadow: 0 10px 20px -10px rgba(0,0,0,0.2);
+  display: flex;
+  overflow: hidden;
 }
+.slide {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  animation: slideshow 30s linear infinite;
+}
+.slide img {
+  height: 70px;
+  padding: 0 30px 0 30px;
+}
+@keyframes slideshow {
+  0% {transform: translateX(0);}
+  100% {transform: translateX(-100%);}
+}
+.slider::before, .slider::after {
+  height: 100px;
+  width: 200px;
+  position: absolute;
+  content: "";
+  background: linear-gradient(to right, white 0%, rgba(255,255,255,0) 100%);
+  z-index: 2;
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider::after {
+  right:0;
+  top:0;
+  transform: rotateZ(180deg);
+}
+  */ 
