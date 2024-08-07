@@ -1,10 +1,10 @@
-//BANNERS ------------------------------------------------
+// BANNERS ------------------------------------------------
 let items = document.querySelectorAll('.box-banners .list .item');
 let next = document.getElementById('next');
 let prev = document.getElementById('prev');
 let thumbnails = document.querySelectorAll('.thumbnail .item');
 
-//parâmetros
+// parâmetros
 let countItem = items.length;
 let itemActive = 0;
 
@@ -55,7 +55,7 @@ thumbnails.forEach((thumbnail, index) => {
     })
 });
 
-//ANÁLISES ------------------------------------------------
+// ANÁLISES ------------------------------------------------
 let card = document.querySelectorAll('.box-card .card');
 let action = 0;
 function loadShow(){
@@ -63,22 +63,24 @@ function loadShow(){
     card[action].style.zIndex = 1;
     card[action].style.filter = 'none';
     card[action].style.opacity = 1;
-
+    
+    // Direita
     let stt = 0;
     for(var i = action + 1; i < card.length; i ++){
         stt++;
-        card[i].style.transform = `translateX(${300*stt}px) scale(${1 - 0.2*stt}) perspective(50px) rotateY(1deg)`;
+        card[i].style.transform = `translateX(${300*stt}px) scale(${1 - 0.3*stt}) perspective(40px) rotateY(-1deg)`;
         card[i].style.zIndex = 0;
         card[i].style.filter = 'blur(10px)';
-        card[i].style.opacity = stt > 1 ? 0 : 1;
+        card[i].style.opacity = stt > 1 ? 0 : 0.2;
     }
     stt = 0;
+    // Esquerda
     for(var i = (action - 1); i >= 0; i --){
         stt++;
-        card[i].style.transform = `translateX(${-300*stt}px) scale(${1 - 0.2*stt}) perspective(50px) rotateY(-1deg)`;
+        card[i].style.transform = `translateX(${-300*stt}px) scale(${1 - 0.3*stt}) perspective(40px) rotateY(1deg)`;
         card[i].style.zIndex = 0;
-        card[i].style.filter = 'blur(0px)';
-        card[i].style.opacity = stt > 2 ? 0 : 1;
+        card[i].style.filter = 'blur(10px)';
+        card[i].style.opacity = stt > 2 ? 0 : 0.2;
     }
 }
 loadShow();
@@ -92,4 +94,35 @@ right.onclick = function (){
 left.onclick = function (){
     action = action - 1 >= 0 ? action - 1 : action;
     loadShow();
+}
+
+// FAQ ------------------------------------------------
+const accordionContent = document.querySelectorAll(".accordion-content");
+accordionContent.forEach((item, index) => {
+    let header = item.querySelector("header");
+    header.addEventListener("click", () => {
+        item.classList.toggle("open");
+
+        let description = item.querySelector(".description");
+        if (item.classList.contains("open")) {
+            description.style.height = `${description.scrollHeight}px`;
+            item.querySelector("i").classList.replace("fa-plus", "fa-minus");
+        } else {
+            description.style.height = "0px";
+            item.querySelector("i").classList.replace("fa-minus", "fa-plus");
+        }
+        removeOpen(index);
+    })
+})
+
+function removeOpen(index1) {
+    accordionContent.forEach((item2, index2) => {
+        if (index1 != index2) {
+            item2.classList.remove("open");
+
+            let des = item2.querySelector(".description");
+            des.style.height = "0px";
+            item2.querySelector("i").classList.replace("fa-minus", "fa-plus");
+        }
+    })
 }
