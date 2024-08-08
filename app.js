@@ -99,7 +99,7 @@ left.onclick = function (){
 // FAQ ------------------------------------------------
 const accordionContent = document.querySelectorAll(".accordion-content");
 accordionContent.forEach((item, index) => {
-    let header = item.querySelector("header");
+    let header = item.querySelector(".accordion-body");
     header.addEventListener("click", () => {
         item.classList.toggle("open");
 
