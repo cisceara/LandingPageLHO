@@ -1,3 +1,27 @@
+// Mobile menu ------------------------------------------------
+const hamburger = document.querySelector('.hamburger');
+const navbar = document.querySelector('.navbar');
+const links = document.querySelectorAll('.links .link');
+
+hamburger.addEventListener('click', function(event) {
+    navbar.classList.toggle('open');
+    event.stopPropagation(); // Impede que o clique se propague para o document
+});
+
+links.forEach(link => {
+    link.addEventListener('click', function() {
+        if (navbar.classList.contains('open')) {
+            navbar.classList.remove('open');
+        }
+    });
+});
+
+document.addEventListener('click', function(event) {
+    // Fecha o menu dropdown se o clique não for dentro do navbar ou do hamburger
+    if (!navbar.contains(event.target) && !hamburger.contains(event.target)) {
+        navbar.classList.remove('open');
+    }
+});
 // BANNERS ------------------------------------------------
 let items = document.querySelectorAll('.box-banners .list .item');
 let next = document.getElementById('next');
