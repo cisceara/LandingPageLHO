@@ -5,7 +5,7 @@ const links = document.querySelectorAll('.links .link');
 
 hamburger.addEventListener('click', function(event) {
     navbar.classList.toggle('open');
-    event.stopPropagation(); // Impede que o clique se propague para o document
+    event.stopPropagation(); 
 });
 
 links.forEach(link => {
@@ -17,11 +17,11 @@ links.forEach(link => {
 });
 
 document.addEventListener('click', function(event) {
-    // Fecha o menu dropdown se o clique não for dentro do navbar ou do hamburger
     if (!navbar.contains(event.target) && !hamburger.contains(event.target)) {
         navbar.classList.remove('open');
     }
 });
+
 // BANNERS ------------------------------------------------
 let items = document.querySelectorAll('.box-banners .list .item');
 let next = document.getElementById('next');
@@ -48,30 +48,25 @@ prev.onclick = function () {
     }
     showhome();
 }
-// Automático
 let refreshInterval = setInterval(() => {
     next.click();
-}, 5000)
+}, 10000)
 function showhome() {
 
-    // remover item antigo
     let itemActiveOld = document.querySelector('.box-banners .list .item.active');
     let thumbnailActiveOld = document.querySelector('.thumbnail .item.active');
     itemActiveOld.classList.remove('active');
     thumbnailActiveOld.classList.remove('active');
 
-    // Ativar novo item
     items[itemActive].classList.add('active');
     thumbnails[itemActive].classList.add('active');
 
-    // Limpar intervalo automátio
     clearInterval(refreshInterval);
     refreshInterval = setInterval(() => {
         next.click();
-    }, 5000)
+    }, 10000)
 }
 
-// Clique minicard
 thumbnails.forEach((thumbnail, index) => {
     thumbnail.addEventListener('click', () => {
         itemActive = index;
@@ -79,7 +74,32 @@ thumbnails.forEach((thumbnail, index) => {
     })
 });
 
-// ANÁLISES ------------------------------------------------
+// SERVIÇOS ------------------------------------------------
+
+var btns = document.querySelectorAll(".btn-service");
+var spans = document.querySelectorAll(".close");
+btns.forEach(button => {
+    button.onclick = function() {
+        var modalId = button.getAttribute("data-modal");
+        var modal = document.getElementById(modalId);
+        modal.style.display = "block";
+    }
+});
+
+spans.forEach(span => {
+    span.onclick = function() {
+        var modal = span.closest(".modal");
+        modal.style.display = "none";
+    }
+});
+
+window.onclick = function(event) {
+    if (event.target.classList.contains('modal')) {
+        event.target.style.display = "none";
+    }
+};
+
+// TÉCNICAS ANÁLITICAS ------------------------------------------------
 let card = document.querySelectorAll('.box-card .card');
 let action = 0;
 function loadShow(){
@@ -118,7 +138,7 @@ right.onclick = function (){
 left.onclick = function (){
     action = action - 1 >= 0 ? action - 1 : action;
     loadShow();
-}
+};
 
 // FAQ ------------------------------------------------
 const accordionContent = document.querySelectorAll(".accordion-content");
@@ -149,4 +169,6 @@ function removeOpen(index1) {
             item2.querySelector("i").classList.replace("fa-minus", "fa-plus");
         }
     })
-}
+};
+
+

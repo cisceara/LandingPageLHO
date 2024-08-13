@@ -3,15 +3,15 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Laboratório de Higiene Ocupacional</title>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" sizes="32x32" href="./Assets/CIS.jpg"/>
 </head>
 
 <body>
-    <!-- Navegação -->
+    <!-- NavegaçãoTop -->
     <header>
         <div class="navbar" id="home">
             <div class="logo">
@@ -26,10 +26,10 @@
                 <li><a class="link" href="#faq">Faq</a></li>
                 <li><a class="link" href="#contact">Contatos</a></li>
                 <!-- btn-mobile -->
-                <a href="#"><button class="btn2">Solicitar análise</button></a>
+                <a href="https://wa.me/5585997510000?text=Estou%20interessado%20em%20contratar%20os%20servi%C3%A7os%20do%20laborat%C3%B3rio%20de%20higiene%20ocupacional%20do%20Instituto%20SESI%20SENAI%20de%20Tecnologia." target="_blank"><button class="btn2">Solicitar análise</button></a>
             </ul>
             <div class="actions">
-                <a href="#"><button class="btn1">Solicitar análise</button></a>
+                <a href="https://wa.me/5585997510000?text=Estou%20interessado%20em%20contratar%20os%20servi%C3%A7os%20do%20laborat%C3%B3rio%20de%20higiene%20ocupacional%20do%20Instituto%20SESI%20SENAI%20de%20Tecnologia." target="_blank"><button class="btn1">Solicitar análise</button></a>
             </div>
             <!-- MenuMobile -->
             <div class="hamburger">
@@ -43,14 +43,13 @@
     <!--Banners-->
     <section class="banners">
         <div class="box-banners">
-            <!--Items-->
             <div class="list">
                 <div class="item active">
                     <img src="./Assets/img1.png">
                     <div class="content">
-                        <h2>+ Economia para sua empresa </h2>
+                        <h2>+Economia para sua empresa </h2>
                         <p>
-                            Os ensaios em saúde e segurança do trabalho estão agora mais próximos, acessíveis e ágeis. Nossa prioridade é garantir que você tenha acesso rápido e fácil a serviços de alta qualidade, garantindo a proteção e o bem-estar no ambiente de trabalho.
+                            Os ensaios em saúde e segurança do trabalho estão agora mais próximos, acessíveis e ágeis. 
                         </p>
                     </div>
                 </div>
@@ -69,8 +68,7 @@
                     <div class="content">
                         <h2>Título3</h2>
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, neque?
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, ex.
+                            Nossa prioridade é garantir que você tenha acesso rápido e fácil a serviços de alta qualidade, garantindo a proteção e o bem-estar no ambiente de trabalho.
                         </p>
                     </div>
                 </div>
@@ -95,12 +93,10 @@
                     </div>
                 </div>
             </div>
-            <!-- Botões -->
             <div class="arrows">
                 <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
                 <button id="next"><i class="fa-solid fa-angle-right"></i></button>
             </div>
-            <!-- Thumbnails -->
             <div class="thumbnail">
                 <div class="item active">
                     <img src="./Assets/img1.png">
@@ -159,30 +155,24 @@
             <div class="title">
                 <h1>Sobre nós</h1>
                 <p class="subtitle">
-                    O Laboratório de Higiene Ocupacional do <b>Instituto SESI SENAI de tecnologia</b> oferece análises de
+                    O Laboratório de Higiene Ocupacional do Instituto SESI SENAI de tecnologia oferece análises de
                     agentes químicos coletados no ambiente de acordo com a
                     ACGIH, NR-15, e Saúde Ocupacional NR-7 seguindo as normas e padrões
-                    nacionais e internacionais, como NIOSH, OSHA e HSE.
-                    <br>
-                    <p></p>
-                    O laboratório dispõe de equipamentos para coleta e análises que garantem a
-                    confiabilidade dos resultados, assim como, um corpo técnico qualificado para a
-                    realização dos ensaios.
-                    
+                    nacionais e internacionais, como NIOSH, OSHA e HSE.<br>
                 </p>
             </div>
         </div>
         <!-- vídeo -->
         <div class="bg-about-us">
             <div class="frame-video">
-                <video width="800px" preload="auto" loop autoplay muted>
+                <video  preload="auto" loop autoplay muted>
                     <source src="./Assets/Institucional Sistema FIEC - 2023.mp4" type="video/mp4" />
                 </video>
             </div>
         </div>
     </section>
 
-    <!-- Serviços -->
+    <!-- Serviços Ofertados -->
     <section class="services" id="services">
         <!-- Título -->
         <div class="center-title">
@@ -196,7 +186,7 @@
                 </div>
             </div>
         </div>
-        <!-- Serviços -->
+        <!-- Grid de serviços -->
         <div class="grid">
             <!-- Avaliação e monitoramento de substâncias  -->
             <div class="service1">
@@ -204,42 +194,84 @@
                     <h2>Análises de substâncias</h2>
                 </div>
                 <div class="box-content">
-                    <p class="s-text">Análises laboratoriais especializadas para amostras de higiene ocupacional, meio ambiente e materiais.</p>
+                    <p class="s-text">Análises laboratoriais especializadas para amostras de higiene ocupacional, meio ambiente e materiais</p>
                     <img src="./Assets/CIS.jpg" class="s-img1" />
-                    <button class="btn-service1"><a>Lore ipsum</a></button>
+                    <button class="btn-service" data-modal="modal-service1"><a>Ver Análises</a></button>
                 </div>
             </div>
+            <!-- Modal1 -->
+            <div id="modal-service1" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Análises de Substâncias</h2>
+                    <p>Veja a lista de análises que realizamos no PDF abaixo:</p>
+                    <a href="./Assets/TABELA DE VALORES DAS ANÁLISES QUÍMICAS LHO - IST-CIS 2024.pdf" target="_blank" class="btn-pdf">Abrir PDF</a>
+                </div>
+            </div>
+
             <!-- locação -->
             <div class="service2">
                 <div class="s-box-title">
                     <h2>Locação de equipamentos</h2>
                 </div>
                 <div class="box-content">
-                    <p class="s-text">Oferecemos uma linha completa e atualizada de equipamentos para  coleta em Higiene Ocupacional. </p>
+                    <p class="s-text">Oferecemos uma linha completa e atualizada de equipamentos para  coleta em Higiene Ocupacional</p>
                     <img src="./Assets/CIS.jpg" class="s-img2" />
-                    <button class="btn-service1"><a>Lore ipsum</a></button>
+                    <button class="btn-service" data-modal="modal-service2"><a>Ver equipamentos</a></button>
                 </div>
             </div>
+            <!-- Modal2 -->
+            <div id="modal-service2" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Locação de Equipamentos</h2>
+                    <p>Em breve, disponibilizaremos para locação equipamentos com tecnologias de ponta voltadas para a higiene ocupacional.</p>
+                    <h3 class="cssanimation lightning">EM BREVE!</h3>
+                    <!-- <a href="#" target="_blank" class="btn-pdf">Abrir PDF</a> -->
+                </div>
+            </div>
+
             <!-- Treinamento -->
             <div class="service3">
                 <div class="s-box-title">
-                    <h2>Treinamentos e qualificação</h2>
+                    <h2>Capacitação</h2>
                 </div>
                 <div class="box-content">
-                    <p class="s-text">Oferecemos programas de capacitação completos para profissionais nas áreas de saúde e segurança ocupacional do trabalho.</p>
+                    <p class="s-text">Oferecemos programas de capacitação completos para profissionais nas áreas de saúde e segurança ocupacional do trabalho</p>
                     <img src="./Assets/CIS.jpg" class="s-img3" />
-                    <button class="btn-service1"><a>Lore ipsum</a></button>
+                    <button class="btn-service" data-modal="modal-service3"><a>Ver treinamentos</a></button>
                 </div>
             </div>
+            <!-- Modal3 -->
+            <div id="modal-service3" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Treinamentos e Qualificação</h2>
+                    <p>Em breve, lançaremos programas de capacitação completos para profissionais das áreas de saúde e segurança ocupacional do trabalho.</p>
+                    <h3 class="cssanimation lightning">EM BREVE!</h3>
+                    <!-- <a href="#" target="_blank" class="btn-pdf">Abrir PDF</a> -->
+                </div>
+            </div>
+
             <!-- Projetos em desenvolvimento -->
             <div class="service4">
                 <div class="s-box-title">
-                    <h2>Em breve</h2>
+                    <h2>Estamos desenvolvendo</h2>
                 </div>
                 <div class="box-content">
-                    <p class="s-text">Desenvolvimento de novas metodologias para atender as diversas áreas da saúde segurança do trabalho.</p>
+                    <p class="s-text">Desenvolvimento de novas tecnologias para atender às necessidades em higiene ocupacional e segurança do trabalho</p>
                     <img src="./Assets/CIS.jpg" class="s-img4" />
-                    <button class="btn-service1"><a>Lore ipsum</a></button>
+                    <button class="btn-service" data-modal="modal-service4"><a>Ver novidades</a></button>
+                </div>
+            </div>
+            <!-- Modal4 -->
+            <div id="modal-service4" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>Projetos em Desenvolvimento</h2>
+                    <p>Em breve, divulgaremos os projetos que estamos desenvolvendo na área de saúde e segurança ocupacional.</p>
+                    <h3 class="cssanimation fadeInBottom">AGUARDE!</h3>
+                    <!-- <a href="#" target="_blank" class="btn-pdf">Abrir PDF</a> -->
                 </div>
             </div>
         </div>
@@ -296,8 +328,8 @@
                         <!-- <button class="btn-card-a"><a>Lore ipsum</a></button> -->
                     <!-- </div> -->
                 <!-- </div> -->
-                <button id="right">></button>
-                <button id="left"><</button>
+                <button id="right"><i class="fa-solid fa-angle-right"></i></button>
+                <button id="left"><i class="fa-solid fa-angle-left"></i></button>
                     
             </div>
         </div>
@@ -326,106 +358,75 @@
             <div class="accordion">
                 <div class="accordion-content">
                     <div class="accordion-body">
-                        <span class="title">Lorem ipsum dolor sit amet consectetur. </span>
+                        <span class="title">Como funciona o processo de coleta de amostras?</span>
                         <i class="fa-solid fa-plus"></i>
                     </div>
                     <p class="description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus nobis ut perspiciatis minima
-                        quidem
-                        nisi, obcaecati, delectus consequatur fuga nostrum iusto ipsam ducimus quibusdam possimus.
-                        Maiores non
-                        enim numquam voluptatem?
+                    Nosso laboratório não realiza coleta de amostras diretamente. Em vez disso, fornecemos os amostradores necessários para que você possa realizar a coleta. Após a aprovação da sua proposta, preparamos e separamos os amostradores especificados para sua solicitação. Você pode optar por retirá-los pessoalmente em nosso laboratório ou solicitar que sejam enviados diretamente para o seu endereço.
+                    Uma vez que a coleta de amostras seja concluída, você deve enviar os amostradores de volta para nós, acompanhados do Documento de Solicitação de Análise devidamente preenchido. Ao recebermos os amostradores, iniciaremos o processo de análise. 
                     </p>
                 </div>
                 <div class="accordion-content">
                     <div class="accordion-body">
-                        <span class="title">Lorem ipsum dolor sit amet consectetur. </span>
+                        <span class="title">Qual o prazo para entrega dos resultados?</span>
                         <i class="fa-solid fa-plus"></i>
                     </div>
                     <p class="description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus nobis ut perspiciatis minima
-                        quidem
-                        nisi, obcaecati, delectus consequatur fuga nostrum iusto ipsam ducimus quibusdam possimus.
-                        Maiores non
-                        enim numquam voluptatem?
+                        Os prazos previstos para entrega dos resultados variam de acordo com os parâmetros analisados, A contagem do prazo inicia-se no dia seguinte ao recebimento das amostras coletadas, considerando apenas os dias úteis.
                     </p>
                 </div>
                 <div class="accordion-content">
                     <div class="accordion-body">
-                        <span class="title">Lorem ipsum dolor sit amet consectetur. </span>
+                        <span class="title">É Preciso agendar uma visita técnica para solicitar análises?</span>
                         <i class="fa-solid fa-plus"></i>
                     </div>
                     <p class="description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus nobis ut perspiciatis minima
-                        quidem
-                        nisi, obcaecati, delectus consequatur fuga nostrum iusto ipsam ducimus quibusdam possimus.
-                        Maiores non
-                        enim numquam voluptatem?
+                        Não é necessário agendar uma visita técnica para a solicitação de análises em nosso laboratório. No entanto, se deseja conhecer nossa estrutura e instalações pessoalmente, ficaremos felizes em recebê-lo. Por favor, entre em contato conosco através do seguinte link para agendar sua visita: [Insira aqui o link do WhatsApp].
                     </p>
                 </div>
                 <div class="accordion-content">
                     <div class="accordion-body">
-                        <span class="title">Lorem ipsum dolor sit amet consectetur. </span>
+                        <span class="title">Quais os documentos necessários para solicitar um serviço?</span>
                         <i class="fa-solid fa-plus"></i>
                     </div>
                     <p class="description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus nobis ut perspiciatis minima
-                        quidem
-                        nisi, obcaecati, delectus consequatur fuga nostrum iusto ipsam ducimus quibusdam possimus.
-                        Maiores non
-                        enim numquam voluptatem?
+                        Disponibilizamos um documento com as informações necessárias para a realização das análises.
                     </p>
                 </div>
                 <div class="accordion-content">
                     <div class="accordion-body">
-                        <span class="title">Lorem ipsum dolor sit amet consectetur. </span>
+                        <span class="title">Quais os equipamentos utilizados pelo laboratório? </span>
                         <i class="fa-solid fa-plus"></i>
                     </div>
                     <p class="description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus nobis ut perspiciatis minima
-                        quidem
-                        nisi, obcaecati, delectus consequatur fuga nostrum iusto ipsam ducimus quibusdam possimus.
-                        Maiores non
-                        enim numquam voluptatem?
+                        O laboratório de higiene ocupacional possui equipamentos de última geração como cromatógrafos líquido e gasoso acoplados à espectrometria de massa, espectrofotometro de absorção atômica, balanças analiticas entre outros, em ambientes com contole rigoroso de temperatura e umidade, garantindo uma segurança maior para seus resultados.
                     </p>
                 </div>
                 <div class="accordion-content">
                     <div class="accordion-body">
-                        <span class="title">Lorem ipsum dolor sit amet consectetur. </span>
+                        <span class="title">Quais as normas técnicas seguidas pelo laboratório?</span>
                         <i class="fa-solid fa-plus"></i>
                     </div>
                     <p class="description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus nobis ut perspiciatis minima
-                        quidem
-                        nisi, obcaecati, delectus consequatur fuga nostrum iusto ipsam ducimus quibusdam possimus.
-                        Maiores non
-                        enim numquam voluptatem?
+                        LO laboratório atende normas técnicas da NIOSH, OSHA, HSE, FUNDACENTRO, bem como, adaptações de metodologias validadas. 
                     </p>
                 </div>
                 <div class="accordion-content">
                     <div class="accordion-body">
-                        <span class="title">Lorem ipsum dolor sit amet consectetur. </span>
+                        <span class="title">Quais os tipos de laudos técnicos emitidos pelo laboratório?</span>
                         <i class="fa-solid fa-plus"></i>
                     </div>
                     <p class="description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus nobis ut perspiciatis minima
-                        quidem
-                        nisi, obcaecati, delectus consequatur fuga nostrum iusto ipsam ducimus quibusdam possimus.
-                        Maiores non
-                        enim numquam voluptatem?
+                        Os laudos técnicos atendem às normas NR 01, NR 15 e legislação previdenciária.  
                     </p>
                 </div>
                 <div class="accordion-content">
                     <div class="accordion-body">
-                        <span class="title">Lorem ipsum dolor sit amet consectetur. </span>
+                        <span class="title">Como posso solicitar um orçamento?</span>
                         <i class="fa-solid fa-plus"></i>
                     </div>
                     <p class="description">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus nobis ut perspiciatis minima
-                        quidem
-                        nisi, obcaecati, delectus consequatur fuga nostrum iusto ipsam ducimus quibusdam possimus.
-                        Maiores non
-                        enim numquam voluptatem?
+                        Entre em contato pelos links (colocar contatos).
                     </p>
                 </div>
             </div>
@@ -437,7 +438,7 @@
         <!-- Título -->
         <div class="title-partners">
             <div class="title">
-                <h1>Lore ipsum</h1>
+                <h1>Nossos parceiros</h1>
             </div>
         </div>
         <!-- Slide empresas  -->
@@ -487,7 +488,7 @@
                 <div class="address">
                     <div class="icon">
                         <a href="https://example.com" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24"><path d="M480 1056q-88 0-166-33.5T184.5 936q-57.5-57-91-135T60 636q0-86 33.5-163.5T185 339q58-57 135-90.5T483 215q88 0 165.5 33.5T783 339q57 57 90.5 134.5T907 636q0 88-33.5 166T783 936q-57 57-134.5 91T480 1056Zm0-420Zm-53 261h106v-94H427v94Zm53-188q23 0 42.5-19.5T542 647q0-21-10-39t-31-39q-4-4-6.5-9t-2.5-10v-21q0-14-10-24t-24-10q-14 0-24 10t-10 24v30q0 10 2.5 19.5T457 602q20 19 29 36.5t9 38.5q0 25-19 45t-45 20q-26 0-45-20t-19-45h-66q0 48 33 80.5t81 32.5Z"/></svg>
+                            <i class="fa-solid fa-square-phone fa-2xl"></i>
                         </a>
                     </div>
                     <div class="text">
@@ -498,7 +499,7 @@
                 <div class="address">
                     <div class="icon">
                         <a href="https://example.com" target="_blank">
-                            <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 96 960 960" width="24"><path d="M480 1056q-88 0-166-33.5T184.5 936q-57.5-57-91-135T60 636q0-86 33.5-163.5T185 339q58-57 135-90.5T483 215q88 0 165.5 33.5T783 339q57 57 90.5 134.5T907 636q0 88-33.5 166T783 936q-57 57-134.5 91T480 1056Zm0-420Zm-53 261h106v-94H427v94Zm53-188q23 0 42.5-19.5T542 647q0-21-10-39t-31-39q-4-4-6.5-9t-2.5-10v-21q0-14-10-24t-24-10q-14 0-24 10t-10 24v30q0 10 2.5 19.5T457 602q20 19 29 36.5t9 38.5q0 25-19 45t-45 20q-26 0-45-20t-19-45h-66q0 48 33 80.5t81 32.5Z"/></svg>
+                            <i class="fa-solid fa-map-location-dot fa-2xl"></i>
                         </a>
                     </div>
                     <div class="text">
@@ -506,21 +507,7 @@
                     </div>
                 </div>
                 <!-- RedesSociais -->
-                <div class="social-container">
-                    <a href="https://wa.me/your-number" target="_blank">
-                        <!-- Ícone do WhatsApp -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M16 1.438c-8.063 0-14.563 6.5-14.563 14.563 0 2.563.656 5.031 1.875 7.188l-2.188 7.406 7.688-2.156c2.063 1.219 4.406 1.781 6.844 1.781 8.063 0 14.563-6.5 14.563-14.563s-6.5-14.563-14.563-14.563zM16 3.063c7.125 0 12.938 5.813 12.938 12.938s-5.813 12.938-12.938 12.938c-2.344 0-4.5-.625-6.406-1.75l-.469-.281-4.719 1.313 1.281-4.594-.344-.531c-1.188-1.875-1.813-4.031-1.813-6.094 0-7.125 5.813-12.938 12.938-12.938zM9.938 8.531c-.156-.344-.344-.344-.531-.344-.156 0-.312-.031-.469-.031-.156 0-.344 0-.531.5-.188.625-.625 1.813-.625 4.406s1.938 5.094 2.188 5.469c.25.344 3.75 6.031 9.344 7.469.844.25 1.5.406 2.031.531.844.188 1.625.156 2.25.094.656-.062 2-.812 2.313-1.563.312-.75.312-1.406.219-1.563-.094-.156-.344-.25-.719-.438s-4.406-2.188-5.094-2.438c-.156-.062-.344-.156-.531-.156s-.344.031-.469.188c-.125.188-.469.563-.594.75-.125.156-.219.188-.406.031-.188-.156-.781-.281-1.5-.875-1.094-.969-1.781-2.156-1.969-2.406-.188-.25-.031-.375.156-.563.156-.188.344-.375.469-.531.156-.188.219-.344.344-.531.125-.156.062-.281 0-.438-.062-.125-.531-1.281-.75-1.75-.188-.406-.344-.438-.531-.438-.156 0-.312 0-.469.031-.188.031-.406.062-.594.25-.188.188-.75.75-.75 1.844 0 1.094.781 2.156 1 2.469z" /></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/your-profile" target="_blank">
-                        <!-- Ícone do LinkedIn -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M12 12h5.535v2.304h.081c.77-1.461 2.653-2.496 4.606-2.496 4.914 0 5.827 3.139 5.827 7.218v8.34h-5.787v-7.396c0-1.762-.032-4.03-2.46-4.03-2.46 0-2.837 1.924-2.837 3.907v7.519h-5.793v-15.862h-0.001zM2.742 12h5.79v15.862h-5.79v-15.862zM8.633 4c-1.859 0-3.367 1.511-3.367 3.367s1.509 3.367 3.367 3.367c1.856 0 3.367-1.511 3.367-3.367s-1.511-3.367-3.367-3.367v0z" /></svg>
-                    </a>
-                    <a href="https://www.instagram.com/your-profile" target="_blank">
-                        <!-- Ícone do Instagram -->
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M16 10.771c-2.9 0-5.229 2.354-5.229 5.229s2.354 5.229 5.229 5.229 5.229-2.354 5.229-5.229-2.354-5.229-5.229-5.229zM16 18.875c-1.586 0-2.875-1.289-2.875-2.875s1.289-2.875 2.875-2.875c1.586 0 2.875 1.289 2.875 2.875s-1.289 2.875-2.875 2.875zM21.312 7.125c-.674 0-1.219.545-1.219 1.219s.545 1.219 1.219 1.219 1.219-.545 1.219-1.219-.545-1.219-1.219-1.219zM20.521 4h-9.042c-4.063 0-7.479 3.416-7.479 7.479v9.042c0 4.063 3.416 7.479 7.479 7.479h9.042c4.063 0 7.479-3.416 7.479-7.479v-9.042c0-4.063-3.416-7.479-7.479-7.479zM26 20.521c0 3.032-2.447 5.479-5.479 5.479h-9.042c-3.032 0-5.479-2.447-5.479-5.479v-9.042c0-3.032 2.447-5.479 5.479-5.479h9.042c3.032 0 5.479 2.447 5.479 5.479v9.042z" /></svg>
-                    </a>
-
-                </div>
+                 
             </div>
             <!-- formulário -->
             <div class="forms">
@@ -549,7 +536,7 @@
         </div>
     </section>
 
-    <!-- Navegação  -->
+    <!-- NavegaçãoEnd  -->
     <section class="end">
         <div class="center-title">
             <div class="title-contact">
