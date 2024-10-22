@@ -507,7 +507,7 @@ section.sites {
 
 /* \\\\\\\\\\\\\\ Sobre nós ////////////// */
 .title-about-us {
-  width: 100%;
+  width: auto;
   height: 250px;
   display: flex;
   justify-content: center;
