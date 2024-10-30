@@ -911,7 +911,7 @@ h2 {
 .card {
   display: flex;
   align-items: end;
-  justify-content: center; 
+  justify-content: center;
   position: absolute;
   left: 0;
   right: 0;
@@ -920,16 +920,17 @@ h2 {
   margin: auto;
   width: 100%;
   max-width: 600px;
-  height: 300px;
-  transition: 0.5s;
+  height: 100% ;
+  max-height: 300px;
+  transition: 0.3s;
   padding: 50px;
 }
 
 .card {
   color: #fff;
-  border-radius: 40px;
-  border: solid 10px #ffffff;
-  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  border-radius: 30px;
+  border: solid 5px #287EEE;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
 .content-card {
@@ -937,12 +938,13 @@ h2 {
 }
 
 .t-card {
-  margin-bottom: 5px; 
+  margin-bottom: 5px;
 }
 
 .btn-card-a {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-top: 10px;
   width: 200px;
   padding: 8px 16px;
@@ -960,6 +962,22 @@ h2 {
   color: #ffffff;
   cursor: pointer;
 }
+
+.bg-card1::after,
+.bg-card2::after,
+.bg-card3::after,
+.bg-card4::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  border-radius: 25px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #0A0B13 15%, transparent);
+  z-index: 1;
+}
+
 
 .bg-card1 {
   background-image: url(./Assets/img1.png);
@@ -989,20 +1007,6 @@ h2 {
   background-repeat: no-repeat;
 }
 
-.bg-card1::after,
-.bg-card2::after,
-.bg-card3::after,
-.bg-card4::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  border-radius: 30px;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, #0A0B13, transparent);
-  z-index: 1;
-}
 
 #right {
   position: absolute;
@@ -1010,7 +1014,9 @@ h2 {
   bottom: 0;
   margin-top: auto;
   margin-bottom: auto;
-  right: 300px;
+  right: 0;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
 }
 
 #left {
@@ -1019,38 +1025,54 @@ h2 {
   bottom: 0;
   margin-top: auto;
   margin-bottom: auto;
-  left: 300px;
+  left: 0;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 #left,
 #right {
-  color: #fff;
-  background: none;
+  width: 100px;
+  height: 50%; 
   border: none;
-  font-size: xxx-large;
-  font-family: monospace;
-  font-weight: bold;
-  opacity: 0.5;
-  transition: opacity 0.5s;
-  z-index: 1;
+  color: #fff;
+  background: #287EEE;
+  opacity: 0.2;
+  transition: opacity 0.4s;
+  z-index: 0;
 }
 
 #left:hover,
 #right:hover {
   opacity: 1;
-}
-
-
-@media (max-width: 1024px) {
-
-
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 @media (max-width: 768px) {
- 
+  .card{
+    max-width: 450px;
+    max-height: 225px;
+  }
 
+  #left,#right{
+    width: 50px;
+    height: 50%;
+  } 
 }
 
+@media (max-width: 480px){
+  .card{ 
+    max-width: 175px;
+    max-height: 350px;
+    text-align: center;
+    padding: 45px;
+  }
+
+  .btn-card-a{
+    margin: 10px auto;
+  }
+
+}
 
 /* \\\\\\\\\\\\\\ CTA ////////////// */
 .call-to-action {
