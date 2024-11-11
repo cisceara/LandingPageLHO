@@ -508,7 +508,7 @@ section.sites {
 /* \\\\\\\\\\\\\\ Sobre nós ////////////// */
 .title-about-us {
   width: auto;
-  height: 250px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -548,16 +548,16 @@ h1 {
 .frame-video {
   width: 100%;
   height: auto;
-  max-width: 700px; 
+  max-width: 800px;
   margin-top: 50px;
   margin-bottom: 100px;
-  border-radius: 30px;
+  border-radius: 20px;
   overflow: hidden;
   border: solid 5px transparent;
-  background:
+  background:0
     linear-gradient(to right, #ffffff, #287EEE) padding-box,
     linear-gradient(to right, #ffffff, #287EEE) border-box;
-  box-shadow: #00000040 0px 50px 60px, #0000001f 0px -20px 30px, #0000001f 0px 10px 6px, #0000002b 0px 12px 13px, #00000017 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
   display: flex;
   justify-content: center; 
   align-items: center;
@@ -592,7 +592,7 @@ video {
 
 @media (max-width: 1024px) {
   .frame-video {
-    max-width: 80vw;
+    width: 750px;
     margin-bottom: 100px;
   }
 }
@@ -612,19 +612,20 @@ video {
   }
 
   .frame-video {
-    max-width: 85vw;
+    max-width: 80vw;
     margin-top: 40px;
     margin-bottom: 50px; 
   }
 
   .typewrite, .typewrite .wrap {
-    font-size: 35px;
+    font-size: 30px;
   }
 
   .typing {
     margin-top: 50px;
   }
 }
+
 
 /* \\\\\\\\\\\\\\ Serviços ////////////// */
 section.services {
@@ -644,11 +645,10 @@ section.services {
   width: 100%;
   max-width: 80%;
   height: 200px;
-  margin: 40px 40px;
+  margin: 0px 40px 40px 40px;
   color: #ffffff;
-  background: linear-gradient(to right, #287EEE, #0A0B13);
-  border-bottom: solid 1px #287EEE;
-  border-radius: 30px;
+  background: linear-gradient(to top, #287EEE, transparent);
+  border-radius: 0 0 20px 20px;
 }
 
 
@@ -899,7 +899,7 @@ h2 {
   color: #ffffff;
   box-shadow: #287EEE 0px 0px 500px;
   border-bottom: solid 1px #287EEE;
-
+  
 }
 
 .box-analysis {
@@ -934,8 +934,8 @@ h2 {
 
 .card {
   color: #fff;
-  border-radius: 30px;
-  border: solid 5px #287EEE;
+  border-radius: 20px;
+  border: solid 5px #ffffff;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 }
 
@@ -977,7 +977,7 @@ h2 {
   position: absolute;
   top: 0;
   bottom: 0;
-  border-radius: 25px;
+  border-radius: 15px;
   width: 100%;
   height: 100%;
   background: linear-gradient(to top, #0A0B13 15%, transparent);
@@ -1084,15 +1084,17 @@ h2 {
 .call-to-action {
   display: flex;
   justify-content: center;
-  background-color: #0A0B13;
+  background: #0A0B13; 
+  height: 120px;
 }
 
 .box-cta {
+  background: linear-gradient(to top, transparent, #0A0B13);
   white-space: nowrap;
   display: flex;
   width: 100%;
-  max-width: 800px;
-  height: 90px;
+  max-width: 900px;
+  height: 100px;
   margin: 100px 20px 0px 20px;
   position: relative;
   bottom: 100px;
@@ -1114,36 +1116,36 @@ h2 {
 }
 
 .btn-cta {
-  background-color: #0A0B13;
-  border-radius: 10px;
+  background-color: transparent;
+  border-radius: 5px;
   color: #ffffff;
   width: 200px;
   padding: 8px 16px;
   font-weight: 600;
-  margin-left: 5px;
   margin-right: 10px; 
-  border-top: 2px solid transparent;
-  border-bottom: 2px solid transparent;
-  border-right: 2px solid #287EEE;
-  border-left: 2px solid #287EEE;
-  transition: all 0.2s ease;
+  border-top: solid 1px  transparent;
+  border-bottom: solid 1px transparent;
+  border-right: solid 1px #287EEE;
+  border-left: solid 1px #287EEE;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn-cta:hover {
   cursor: pointer;
   color: #ffffff;
   background: #287EEE;
-  border: 2px solid #287EEE;
+  border: 1px solid #287EEE;
   box-shadow: 0 0 2px #287EEE, 0 0 10px #287EEE, 0 0 20px #287EEE,
     0 0 50px #287EEE;
-  transform: scale(1.04);
+  transform: scale(1.05);
+  text-shadow: 0px 0px 20px #0A0B13;
 }
 
 
 @media (max-width: 768px){
   .box-cta {
     flex-direction: column;
-    height: auto;
+    height: 120px;
     justify-content: center;
   }
 
@@ -1157,24 +1159,10 @@ h2 {
   .btn-cta{
     position: relative;
     bottom: 30px;
+    margin: 0;
   }
 }
 
-/* \\\\\\\\\\\\\\ Parceiros ////////////// */
-.our-partners {
-  background: #0A0B13;
-  height: 200px;
-}
-
-.title-partners {
-  width: 100%;
-  height: 150px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: #ffffff;
-  background: #0A0B13;
-}
 
 /* \\\\\\\\\\\\\\ FAQ ////////////// */
 .title-faq {
@@ -1184,11 +1172,9 @@ h2 {
   justify-content: center;
   align-items: center;
   color: #ffffff;
-  background: linear-gradient(90deg, #0A0B13, #287EEE, #0A0B13);
 }
 
 .bg-accordion {
-  min-height: 100%;
   display: grid;
   align-items: center;
   justify-content: center;
@@ -1196,104 +1182,178 @@ h2 {
 }
 
 .accordion {
-  max-width: 500px;
   width: 100%;
-  padding: 40px 60px;
+  max-width: 600px;
+  margin-bottom: 40px;
+  padding: 60px 40px;
   border-radius: 20px;
-  box-shadow: 0px 0px 500px 0px #287eee;
+  box-shadow: 0px 0px 200px 0px #287EEE;
   overflow: hidden;
-  border: solid 4px transparent;
+  border: solid 1px #287EEE;
   background:
-    linear-gradient(to left, #0a0b1300, #0A0B13) padding-box,
-    linear-gradient(to bottom, #0A0B13, #287EEE) border-box;
+    linear-gradient(to left, transparent, transparent) padding-box,
+    linear-gradient(to bottom, transparent, #287EEE) border-box;
 }
 
 .accordion .accordion-content {
-  margin: 15px 0px;
-  border-radius: 5px;
-  background: #287EEE;
+  margin: 0;
+  border-radius: 10px;
+  background: #0A0B13;
+  border-top: 1px solid #287EEE;
+  border-left: 1px solid #287EEE;
   overflow: hidden;
+  box-shadow: 0px 0px 40px 0px #0A0B13;
+  
 }
 
 .accordion-content.open {
-  padding-bottom: 10px;
+  padding-bottom: 20px;
 }
 
 .accordion-content .accordion-body {
   display: flex;
-  min-height: 50px;
-  padding: 0 20px;
+  min-height: 60px;
+  padding: 0px 20px;
   cursor: pointer;
   align-items: center;
   justify-content: space-between;
-  transition: all 0.2s linear;
+  transition: all 1s ease;
 }
 
 .accordion-content.open .accordion-body {
-  min-height: 50px;
+  min-height: 60px;
 }
 
 .accordion-content .accordion-body .title {
-  margin: 0px 20px;
-  font-size: 14px;
-  font-weight: 500;
+  margin: 0px 0px;
+  font-size: 16px;
   color: #ffffff;
+  font-weight: 600;
 }
 
 .accordion-content .accordion-body i {
-  font-size: 14px;
+  font-size: 16px;
   color: #ffffff;
 }
 
 .accordion-content .description {
   height: 0;
   color: #ffffff;
+  font-size: 12px;
   font-weight: 400;
   padding: 0 20px;
-  transition: all 0.3s linear;
+  transition: all 0.2s linear;
+  text-align: center;
+}
+
+.link-faq{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  background-color: transparent;
+  border-radius: 5px;
+  color: #ffffff;
+  width: 200px;
+  padding: 8px 16px;
+  font-weight: 600;
+  border-top: solid 1px  transparent;
+  border-bottom: solid 1px transparent;
+  border-right: solid 1px #287EEE;
+  border-left: solid 1px #287EEE;
+  transition: all 0.2s ease-in-out;
+}
+
+.link-faq:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background: #287EEE;
+  border: 1px solid #287EEE;
+  box-shadow: 0 0 2px #287EEE, 0 0 10px #287EEE, 0 0 20px #287EEE,
+    0 0 50px #287EEE;
+  transform: scale(1.05);
+  text-shadow: 0px 0px 20px #0A0B13;
+}
+
+@media (max-width: 768px){
+  .accordion{
+    width: 420px;
+    margin-bottom: 60px;
+  }
+  .title-faq{
+    margin-top: 20px;
+  }
+  .accordion-content .accordion-body .title{
+    text-align: left;
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px){
+  .accordion{
+    width: 260px;
+    height: auto;
+    padding: 60px 40px;
+    margin-bottom: 40px;
+  }
+
+  .accordion-content .accordion-body .title{
+    text-align: left;
+    font-size: 12px;
+  }
+
+  .link-faq{
+    width: 180px;
+  }
 }
 
 /* \\\\\\\\\\\\\\ Parceiros ////////////// */
+
 .our-partners {
-  background-color: #0A0B13;
+  background-color: transparent;
   height: 100%;
 }
 
 .title-partners {
-  height: auto;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  justify-content: center; 
   align-items: center;
+  display: flex;
+  margin: 20px auto;
+  height: 80px;
+  border-top: 1px solid #287EEE;
   color: #ffffff;
+  border-radius: 20px;
+
 }
 
 .box-partners {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 10px;
 }
 
 .partners {
-  width: 1000px;
-  height: 100px;
   position: relative;
-  border: solid 5px transparent;
   display: flex;
   overflow: hidden;
+  margin: 0px 40px;
 }
 
 .partner {
   height: 100px;
   display: flex;
   align-items: center;
-  animation: slideshow 50s linear infinite;
+  animation: slideshow 35s linear infinite;
 }
 
 .partner img {
-  height: 70px;
-  padding: 0 30px 0 30px;
+  max-width: 160px;
+  height: auto;
+  padding: 0px 20px;
+  pointer-events: none;
+  user-select: none;
+
 }
 
 @keyframes slideshow {
@@ -1308,12 +1368,12 @@ h2 {
 
 .partners::before,
 .partners::after {
-  width: 500px;
+  width: 150px;
   height: 100px;
   position: absolute;
   content: "";
-  background: linear-gradient(to right, #0A0B13 0%, #0a0b1300 100%);
-  z-index: 2;
+  background: linear-gradient(to right, #0A0B13, transparent);
+  z-index: 1;
 }
 
 .partners::before {
@@ -1327,6 +1387,13 @@ h2 {
   transform: rotateZ(180deg);
 }
 
+@media (max-width: 768px){
+  .title-partners{
+    width: 340px;
+  }
+}
+
+
 /* \\\\\\\\\\\\\\ Fale conosco //////////////  */
 
 .contacts {
@@ -1337,49 +1404,208 @@ h2 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80vw;
+  width: 100%;
   height: 200px;
-  margin-top: 100px;
+  margin-top: 60px;
   color: #ffffff;
-  background: linear-gradient(to top, #0A0B13, #287EEE);
-  border-radius: 30px 30px 0px 0px;
+  background: linear-gradient(to left, transparent, #287EEE);
 }
 
 .content-contacts{
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 50px;
-  background: linear-gradient(to top, #0A0B13, #287EEE);
+  width: 100%;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  background-image: linear-gradient(to bottom, transparent, #0A0B13), url("./Assets/IST.jpg");
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-image: linear-gradient(to right, #ffffff, #287EEE) 1;
+  border-top: 4px solid;
+
+}
+
+.contact{
+  margin: 20px;
+  width: 100%;
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  max-width: 500px;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, #287EEE, #0A0B13);
+  backdrop-filter: blur(5px);
+  box-shadow: #0A0B13 0px 0px 100px;
+  border-bottom: 2px solid #287EEE;
+}
+
+.box-contact{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  box-shadow: #0A0B13 0px 0px 50px;
+  background: linear-gradient(to bottom, transparent, #0A0B13); 
+}
+
+h3{
+  font-size: 24px;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+.text-tel .text-address, p{
+  font-size: 12px;
+  text-shadow: 0px 0px 20px #0A0B13;
+
+}
+
+.c-icon{
+  margin-right: 12px;
+  transition: all 0.2s ease-in-out;
+}
+
+.c-icon a{
+  color: #ffffff;
+  width: 200px;
+  height: auto;
+}
+
+.c-icon:hover{
+  transform: scale(1.5);
+}
+
+.tel {
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  max-width: 150px;
+  padding: 20px;
+  border-left: 4px solid #287EEE;
+  color: #ffffff;
+  background: linear-gradient(to right, transparent, #287EEE);
+  margin-bottom: 10px;
+  border-radius: 0px 10px 10px 0px;
 }
 
 .address {
+  font-weight: 600;
   display: flex;
   align-items: center;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  max-width: 300px;
-  background-color: #f9f9f9;
+  justify-content: left;
+  max-width: 400px;
+  padding: 16px;
+  margin-bottom: 20px; 
+  border-left: 4px solid #287EEE;
+  color: #ffffff;
+  background: linear-gradient(to right, transparent, #287EEE);
+  border-radius: 0px 10px 10px 0px;
 }
 
-.icon {
-  margin-right: 10px;
+.map{
+  display: flex;
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  border-width: 5px;
+  border-style: solid;
+  margin: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: solid 5px transparent;
+  background:
+    linear-gradient(to right, #ffffff, #287EEE) padding-box,
+    linear-gradient(to bottom, #ffffff, #287EEE) border-box;
+  box-shadow: #287EEE 0px 0px 40px;
+  border-radius: 10px;
 }
 
-.text {
-  font-size: 16px;
-  color: #333;
-}
-
-.icon a {
-  text-decoration: none; 
-  color: inherit; 
+.map iframe{
+  max-width: 100%;
+  height: 200px;
 }
 
 /*  Redes sociais  */
+.media {
+  width: fit-content;
+  height: fit-content;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 40px;
+  gap: 24px;
+  border-left: 2px solid #287EEE;
+  border-right: 2px solid #287EEE;
+}
+
+.socialContainer {
+  width: 60px;
+  height: 60px;
+  background: #287EEE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition-duration: 0.3s;
+}
+/* instagram*/
+.containerOne:hover {
+  background-color: #d62976;
+  transition-duration: 0.3s;
+  transform: scale(1.4);
+  border-radius: 10px;
+}
+
+/* linkdin*/
+.containerTwo:hover {
+  background-color: #0072b1;
+  transition-duration: 0.3s;
+  transform: scale(1.4);
+  border-radius: 10px;
+}
+/* Whatsapp*/
+.containerThree:hover {
+  background-color: #25d366;
+  transition-duration: 0.3s;
+  transform: scale(1.4);
+  border-radius: 10px;
+}
+
+.socialContainer:active {
+  transform: scale(0.9);
+  transition-duration: 0.3s;
+}
+
+.socialSvg {
+  width: 20px;
+}
+
+.socialSvg path {
+  fill: rgb(255, 255, 255);
+}
+
+.socialContainer:hover .socialSvg {
+  animation: slide-in-top 0.3s both;
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 
 
 /* Formulário */
