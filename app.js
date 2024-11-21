@@ -158,7 +158,7 @@ window.onclick = function(event) {
 
 // TÉCNICAS ANÁLITICAS ------------------------------------------------
 let card = document.querySelectorAll('.box-card .card');
-let action = 0;
+let action = 1;
 function loadShow(){
     card[action].style.transform = `none`;
     card[action].style.zIndex = 1;
@@ -228,4 +228,15 @@ function removeOpen(index1) {
     })
 };
 
+
+// Navegação ------------------------------------------------
+const backToTopButton = document.querySelector('.btn-back-to-top');
+
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 800) {
+    backToTopButton.style.display = 'flex';
+  } else {
+    backToTopButton.style.display = 'none';
+  }
+});
 
