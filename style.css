@@ -25,9 +25,7 @@
   margin: 0;
   padding: 0;
   font-family: "Raleway", sans-serif;
-  font-size: 14px;
   scroll-behavior: smooth !important;
-  
 }
 
 body{
@@ -38,11 +36,11 @@ body{
 /* \\\\\\\\\\\\\\ Header ////////////// */
 header {
   width: 100%;
-  min-height: auto;
+  height: auto;
   position: fixed;
   top: 0;
   z-index: 1000;
-  background: linear-gradient(to left, transparent, #0A0B13);
+  background: linear-gradient(to right, transparent, #0A0B13);
   backdrop-filter: blur(5px);
   box-shadow: #0000001a 0px 20px 25px -5px, #0000000a 0px 10px 10px -5px;
 }
@@ -53,14 +51,14 @@ header {
   align-items: center;
   margin-top: 10px;
   margin-bottom: 10px; 
-  padding-right: 50px;  
-  padding-left: 30px;
+  padding-right: 20px;  
+  padding-left: 20px;
 }
 
 .logo{
   flex: 1;
   margin-right: 20px; 
-  min-width: 120px; 
+  min-width: 140px; 
 }
 
 .ist {
@@ -220,8 +218,8 @@ li, a {
     top: 100px;
     right: 50px;
     background: #0A0B13;
-    padding: 30px 15px;
-    border-radius: 10px;
+    padding: 60px 20px;
+    border-radius: 20px;
     box-shadow: #32325d40 0px 13px 27px -5px, #0000004d 0px 8px 16px -8px;
     z-index: 1000;
   }
@@ -1169,7 +1167,7 @@ h2 {
   margin-bottom: 80px;
   padding: 60px 40px;
   border-radius: 20px;
-  box-shadow: 0px 0px 200px 0px #287EEE;
+  box-shadow: 0px 0px 50px 0px #287EEE;
   overflow: hidden;
   border: solid 1px #287EEE;
   background:
