@@ -287,8 +287,8 @@ li, a {
 }
 
 .box-banners .list .item img {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
 
@@ -299,7 +299,7 @@ li, a {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-image: linear-gradient(to top, #0A0B13 0%, transparent);
+  background-image: linear-gradient(to top, #0A0B13 5%, transparent);
 }
 
 .box-banners .list .item .content {
@@ -555,7 +555,7 @@ h1 {
 .frame-video {
   width: 100%;
   height: auto;
-  max-width: 900px;
+  max-width: 800px;
   margin-top: 60px;
   margin-bottom: 100px;
   border-radius: 20px;
@@ -1062,28 +1062,28 @@ h2 {
 
 
 .bg-card1 {
-  background-image: url(./Assets/img1.png);
+  background-image: url(./Assets/Gravimetria.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .bg-card2 {
-  background-image: url(./Assets/img1.png);
+  background-image: url(./Assets/A-Atômica.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .bg-card3 {
-  background-image: url(./Assets/img1.png);
+  background-image: url(./Assets/C-Gasosa.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 .bg-card4 {
-  background-image: url(./Assets/img1.png);
+  background-image: url(./Assets/C-Líquida.jpeg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1320,7 +1320,7 @@ h2 {
   height: 0;
   color: #ffffff;
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 500;
   padding: 0 20px;
   transition: all 0.2s linear;
   text-align: center;
@@ -1372,6 +1372,12 @@ h2 {
     text-align: left;
     font-size: 14px;
   }
+
+  .accordion-content .description {
+    font-size: 14px;
+    font-weight: 500;
+  }
+
 }
 @media (max-width: 480px){
   .accordion{
@@ -1390,7 +1396,7 @@ h2 {
     width: 50%;
     white-space: wrap;
     height: auto;
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 10px;
   }
 }
@@ -1493,8 +1499,6 @@ h2 {
   .partners{
     width: 100%;
   }
-
-
 }
 
 
@@ -1551,7 +1555,7 @@ h2 {
   display: flex;
   flex-direction: column;
   margin-bottom: 20px;
-  border-radius: 20px;
+  border-radius: 40px;
   box-shadow: #0a0b133d 0px 0px 50px;
 }
 
@@ -1971,6 +1975,8 @@ footer{
   background: #0A0B13;
   border-image: linear-gradient(to right, transparent, #ffffff, transparent) 1;
   border-top: 1px solid;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .footer-text p{
