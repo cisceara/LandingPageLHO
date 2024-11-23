@@ -226,6 +226,19 @@ function removeOpen(index1) {
     });
 }
 
+// FORMS -------------------------------------------------
+function formatarTelefone(campo) {
+    let telefone = campo.value.replace(/\D/g, ""); 
+    if (telefone.length > 10) {
+        telefone = telefone.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+    } else if (telefone.length > 6) {
+        telefone = telefone.replace(/(\d{2})(\d{4})(\d{0,4})/, "($1) $2-$3");
+    } else if (telefone.length > 2) {
+        telefone = telefone.replace(/(\d{2})(\d{0,5})/, "($1) $2");
+    }
+    campo.value = telefone;
+}
+
 // NAVEGAÇÃO -------------------------------------------------
 const backToTopButton = document.querySelector('.btn-back-to-top');
 
