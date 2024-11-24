@@ -239,6 +239,63 @@ function formatarTelefone(campo) {
     campo.value = telefone;
 }
 
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contactForm");
+    const popup = document.getElementById("popup");
+    const closePopup = document.getElementById("closePopup");
+    const popupMessage = document.querySelector("#popup .popup-content p");
+    const loadingContainer = document.getElementById("loading-container");
+    const successMessage = document.getElementById("success-message");
+
+    form.addEventListener("submit", function (event) {
+        event.preventDefault(); // Evita o comportamento padrão do formulário
+
+        const formData = new FormData(form);
+
+        // Exibe o spinner e a mensagem de "Enviando..."
+        loadingContainer.style.display = "block";
+        successMessage.style.display = "none"; // Esconde a mensagem de sucesso/erro
+        popup.style.display = "flex"; // Exibe o popup
+
+        fetch(form.action, {
+            method: "POST",
+            body: formData,
+        })
+            .then((response) => response.json())  // Trata a resposta JSON do PHP
+            .then((data) => {
+                if (data.status === "success") {
+                    popupMessage.textContent = data.message; // Define a mensagem de sucesso
+                    loadingContainer.style.display = "none"; // Esconde o spinner
+                    successMessage.style.display = "block"; // Exibe a mensagem de sucesso
+                    successMessage.querySelector("p").textContent = data.message; // Adiciona a mensagem de sucesso ao popup
+                } else {
+                    popupMessage.textContent = data.message; // Define a mensagem de erro
+                    loadingContainer.style.display = "none"; // Esconde o spinner
+                    successMessage.style.display = "block"; // Exibe a mensagem de erro
+                    successMessage.querySelector("p").textContent = data.message; // Adiciona a mensagem de erro ao popup
+                }
+            })
+            .catch((error) => {
+                console.error("Erro:", error);
+                popupMessage.textContent = "Erro ao processar a solicitação. Tente novamente.";
+                loadingContainer.style.display = "none"; // Esconde o spinner
+                successMessage.style.display = "block"; // Exibe a mensagem de erro
+                successMessage.querySelector("p").textContent = "Erro ao processar a solicitação. Tente novamente."; // Exibe a mensagem de erro
+            });
+    });
+
+    closePopup.addEventListener("click", function () {
+        popup.style.display = "none"; // Fecha o popup
+    });
+
+    window.addEventListener("click", function (event) {
+        if (event.target === popup) {
+            popup.style.display = "none"; // Fecha o popup ao clicar fora dele
+        }
+    });
+});
+
+
 // NAVEGAÇÃO -------------------------------------------------
 const backToTopButton = document.querySelector('.btn-back-to-top');
 

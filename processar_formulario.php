@@ -1,49 +1,59 @@
 <?php
-// Verifica se o formulário foi submetido
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Coleta os dados do formulário e realiza o tratamento adequado
-    $nome = trim($_POST['nome']);  // Remove espaços extras antes e depois
-    $telefone = trim($_POST['telefone']);
-    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);  // Sanitiza o email
-    $mensagem = trim($_POST['mensagem']);  // Remove espaços extras
+require 'vendor/autoload.php';
 
-    // Verifica se os campos obrigatórios foram preenchidos
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = trim($_POST['nome']);  
+    $telefone = trim($_POST['telefone']);
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);  
+    $mensagem = trim($_POST['mensagem']); 
+
     if (empty($nome) || empty($telefone) || empty($email) || empty($mensagem)) {
-        die("Por favor, preencha todos os campos obrigatórios.");
+        echo json_encode(["status" => "error", "message" => "Por favor, preencha todos os campos obrigatórios."]);
+        exit;
     }
 
-    // Evita que o usuário insira código HTML nas entradas
     $nome = htmlspecialchars($nome, ENT_QUOTES, 'UTF-8');
     $telefone = htmlspecialchars($telefone, ENT_QUOTES, 'UTF-8');
     $mensagem = htmlspecialchars($mensagem, ENT_QUOTES, 'UTF-8');
 
     // Validação de email
     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        die("O email informado não é válido.");
+        echo json_encode(["status" => "error", "message" => "O email informado não é válido."]);
+        exit;
     }
 
-    // Configuração do email
-    $to = 'suportecis@sfiec.org.br';  // Destinatário
-    $subject = 'Nova mensagem de contato';  // Assunto
-    $message = "Você recebeu uma nova mensagem de contato:\n\n";
-    $message .= "Nome: $nome\n";
-    $message .= "Telefone: $telefone\n";
-    $message .= "Email: $email\n";
-    $message .= "Mensagem:\n$mensagem\n";
+    $mail = new PHPMailer(true);
 
-    // Cabeçalhos do email
-    $headers = "MIME-Version: 1.0" . "\r\n";
-    $headers .= "Content-Type: text/plain; charset=UTF-8" . "\r\n";
-    $headers .= "From: $email" . "\r\n"; // O email do remetente
-    $headers .= "Reply-To: $email" . "\r\n"; // Resposta para o email do remetente
+    try {
+        // Configuração do SMTP
+        $mail->isSMTP();  
+        $mail->Host = 'smtp.gmail.com';  
+        $mail->SMTPAuth = true; 
+        $mail->Username = 'math.mill01@gmail.com';  // E-mail do Gmail que vai processar os dados;
+        $mail->Password = 'zsiblzsotejiiilm';  // Senha do Gmail (ou  "Senhas de app" caso tenha verificação de duas etapas;
+        $mail->Port = 587; 
 
-    // Enviar o email
-    if (mail($to, $subject, $message, $headers)) {
-        echo "Mensagem enviada com sucesso!";
-    } else {
-        echo "Erro ao enviar mensagem. Tente novamente.";
+        $mail->setFrom($email, $nome);  // Remetente
+        $mail->addAddress('math.mill01@gmail.com');  // Destinatário
+
+        $mail->isHTML(false);  
+        $mail->Subject = 'Contato_LandingPage - LHO'; 
+        $mail->Body = "Solicitação gerada através do formulário na LandingPage do LHO, dados do usuário:\n\n";
+        $mail->Body .= "Nome: $nome\n";
+        $mail->Body .= "Telefone: $telefone\n";
+        $mail->Body .= "Email: $email\n";
+        $mail->Body .= "Mensagem:\n$mensagem\n";
+
+        // Enviar o e-mail
+        $mail->send();
+        echo json_encode(["status" => "success", "message" => "Mensagem enviada com sucesso!"]);
+    } catch (Exception $e) {
+        echo json_encode(["status" => "error", "message" => "Erro ao enviar a mensagem. Erro: {$mail->ErrorInfo}"]);
     }
 } else {
-    echo "Método inválido.";
+    echo json_encode(["status" => "error", "message" => "Método inválido."]);
 }
 ?>

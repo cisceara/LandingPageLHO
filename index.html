@@ -7,7 +7,7 @@
     <title>Laboratório de Higiene Ocupacional</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
     <link rel="stylesheet" href="./style.css" />
-    <link rel="icon" sizes="32x32" href="./Assets/CIS.jpg"/>
+    <link rel="icon" href="./Assets/CIS.jpg"/>
     <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@1&display=swap" rel="stylesheet">
 </head>
 
@@ -523,7 +523,7 @@
             </div>
             <!-- formulário -->
             <div class="forms">
-                <form action="processar_formulario.php" method="post">
+                <form id="contactForm" action="./processar_formulario.php" method="post">
                     <div class="form-group">
                         <div>
                             <label for="nome">Nome:</label>
@@ -565,21 +565,7 @@
             </div>
         </div>
     </section>
-
-    <!-- Navegação -->
-        <!-- Início -->
-    <div class="top">
-        <a href="#top" class="btn-back-to-top">
-            <i class="fas fa-arrow-up"></i>
-        </a>
-    </div>
-        <!-- WhatsApp -->
-    <div class="whatsapp">
-        <a href="https://wa.me/5585997510000?text=Ol%C3%A1!%20Gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Laborat%C3%B3rio%20de%20Higiene%20Ocupacional%20do%20Instituto%20SESI%20SENAI%20de%20Tecnologia." class="btn-whatsapp" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-        </a>
-    </div>
-
+    
     <footer>
         <div class="sites">
             <div class="logos">
@@ -615,6 +601,33 @@
             <p>© 2024 (ISST) Instituto SESI SENAI de Tecnologia - Todos os direitos reservados. </p>
         </div>
     </footer>
+
+        <!-- Início -->
+    <div class="top">
+        <a href="#top" class="btn-back-to-top">
+            <i class="fas fa-arrow-up"></i>
+        </a>
+    </div>
+        <!-- WhatsApp -->
+    <div class="whatsapp">
+        <a href="https://wa.me/5585997510000?text=Ol%C3%A1!%20Gostaria%20de%20obter%20mais%20informa%C3%A7%C3%B5es%20sobre%20o%20Laborat%C3%B3rio%20de%20Higiene%20Ocupacional%20do%20Instituto%20SESI%20SENAI%20de%20Tecnologia." class="btn-whatsapp" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- Popup -->
+    <div id="popup" style="display: none;">
+        <div class="popup-content">
+            <span class="close-btn" id="closePopup">×</span>
+            <div id="loading-container">
+                <div class="spinner"></div>
+                <p class="loading-message">Enviando... Aguarde.</p>
+            </div>
+            <div id="success-message" style="display: none;">
+                <p></p> <!-- Mensagem  -->
+            </div>
+        </div>
+    </div>
 
     <script src="./app.js"></script>
 </body>
