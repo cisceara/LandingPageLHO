@@ -302,3 +302,20 @@ const backToTopButton = document.querySelector('.btn-back-to-top');
 window.addEventListener('scroll', () => {
     backToTopButton.style.display = window.scrollY > 800 ? 'flex' : 'none';
 });
+
+// COOKIES -------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+    const cookieBanner = document.getElementById("cookie-banner");
+    const acceptButton = document.getElementById("accept-cookies");
+
+    // Verifica se o usuário já aceitou os cookies
+    if (!localStorage.getItem("cookiesAccepted")) {
+      cookieBanner.style.display = "flex";
+    }
+
+    // Esconde o banner ao aceitar
+    acceptButton.addEventListener("click", () => {
+      localStorage.setItem("cookiesAccepted", "true");
+      cookieBanner.style.display = "none";
+    });
+  });
